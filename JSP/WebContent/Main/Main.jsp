@@ -9,6 +9,7 @@
 <body>
 <div align="center">
 <h2>상담 E - 로고 이미지 들어갈 자리</h2>
+test
 </div>
 </body>
 </html>
