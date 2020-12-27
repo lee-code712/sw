@@ -17,6 +17,7 @@ margin: 0 auto;
 </head>
 
 <body>
+<<<<<<< HEAD
 <div class="main" align="center">
 <h3> 로고 이미지</h3>
 </div>
@@ -40,6 +41,10 @@ margin: 0 auto;
 </div>
 <div class="main" align="left">
 푸터 위치
+=======
+<div align="center">
+<h2>상담 E - 로고 이미지 들어갈 자리</h2>
+>>>>>>> parent of a36dccf... 커밋 테스트 2
 </div>
 </body>
 </html>
