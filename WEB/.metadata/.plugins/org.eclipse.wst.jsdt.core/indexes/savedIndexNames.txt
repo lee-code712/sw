@@ -1,2 +1,0 @@
-INDEX VERSION 1.4+C:\Users\huff0\Desktop\01\소프트웨어 경진대회\sw\WEB\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-4269720582.index
