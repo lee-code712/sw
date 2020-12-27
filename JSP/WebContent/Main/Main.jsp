@@ -10,14 +10,14 @@
 <style>
 div.main {
 width:1200px;
-margin: 0 auto;
+margin:0 auto;
 }
 </style>
 </head>
 
 <body>
 <div class="main" align="center">
-<h3> 로고 이미지</h3>
+<h3>로고 이미지</h3>
 </div>
 <div class="main">
 <span>헤더 위치</span><span style="float:right;"><button>로그인</button></span>
