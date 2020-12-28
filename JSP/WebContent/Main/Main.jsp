@@ -20,7 +20,7 @@ margin:0 auto;
 <h3>로고 이미지</h3>
 </div>
 <div class="main">
-<span>헤더 위치</span><span style="float:right;"><button>로그인</button></span>
+<span>헤더 위치</span><span style="float:right;"><button type="button" onClick="location.href='login.jsp'">로그인</button></span>
 </div>
 <div class="main" align="center">
 <hr/>
