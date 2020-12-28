@@ -6,6 +6,21 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<script>
+function zoomIn(event) {
+    event.target.style.width = "75px";
+    event.target.style.height = "75px";
+    event.target.style.transition = "all 0.5s";
+  }
+
+function zoomOut(event) {
+	event.target.style.width = "70px";
+    event.target.style.height = "70px";
+    event.target.style.transition = "all 0.5s";
+  }
+</script>
+
 <style>
 img {
 width:70px;
@@ -25,36 +40,36 @@ tr.left { text-align:left; }
 </tr>
 <tr>
 	<td>
-		<img src="image/apply.png" alt="apply">
+		<img src="image/apply.png" alt="apply" onmouseover="zoomIn(event)" onmouseleave="zoomOut(event)">
 	</td>
 	<td>&nbsp;</td>
 	<td>
-		<img src="image/list.png" alt="list">
+		<img src="image/list.png" alt="list" onmouseover="zoomIn(event)" onmouseleave="zoomOut(event)">
 	</td>
 	<td>&nbsp;</td>
 	<td>
-		<img src="image/message.png" alt="message">
+		<img src="image/message.png" alt="message" onmouseover="zoomIn(event)" onmouseleave="zoomOut(event)">
 	</td>
 	<td>&nbsp;</td>
 	<td>
-		<img src="image/notice.png" alt="notice">
+		<img src="image/notice.png" alt="notice" onmouseover="zoomIn(event)" onmouseleave="zoomOut(event)">
 	</td>
 </tr>
 <tr>
 	<td>
-		<img src="image/tmp_button.png" alt="tmp_button">
+		<img src="image/tmp_button.png" alt="tmp_button" onmouseover="zoomIn(event)" onmouseleave="zoomOut(event)">
 	</td>
 	<td>&nbsp;</td>
 	<td>
-		<img src="image/tmp_button.png" alt="tmp_button">
+		<img src="image/tmp_button.png" alt="tmp_button" onmouseover="zoomIn(event)" onmouseleave="zoomOut(event)">
 	</td>
 	<td>&nbsp;</td>
 	<td>
-		<img src="image/tmp_button.png" alt="tmp_button">
+		<img src="image/tmp_button.png" alt="tmp_button" onmouseover="zoomIn(event)" onmouseleave="zoomOut(event)">
 	</td>
 	<td>&nbsp;</td>
 	<td>
-		<img src="image/tmp_button.png" alt="tmp_button">
+		<img src="image/tmp_button.png" alt="tmp_button" onmouseover="zoomIn(event)" onmouseleave="zoomOut(event)">
 	</td>
 </tr>
 </table>
