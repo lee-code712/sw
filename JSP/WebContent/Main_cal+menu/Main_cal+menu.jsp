@@ -1,4 +1,5 @@
-<%-- 메인 페이지 바디 부분 --%>
+<%-- 달력, 메뉴 존재하는 메인 페이지 --%>
+<%-- 메인 페이지 바디 부분 구현 --%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
