@@ -26,7 +26,7 @@ text-align:right;
 </div>
 <div class="main" align="center">
 <hr/>
-<form method="post">
+<form  name="log_form" method="post">
 <table>
 <tr>
 <td>
@@ -50,7 +50,7 @@ text-align:right;
 <tr>
 <td>
 	<input type="submit" value="로그인">
-	<input type="reset" value="초기화">
+	<button type="button" onClick="location.href='sign_up.jsp'">회원가입</button>
 </td>
 </tr>
 </table>

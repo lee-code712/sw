@@ -50,8 +50,8 @@ color:gray;
 <img src="image/main_logo.png" id="main_logo" alt="main">
 <table>
 <tr>
-<td><img src="image/login.png" class="button" alt="login" onmouseover="zoomIn(event)" onmouseleave="zoomOut(event)"></td>
-<td><img src="image/join.png" class="button" alt="join" onmouseover="zoomIn(event)" onmouseleave="zoomOut(event)"></td>
+<td><img src="image/login.png" class="button" alt="login" onmouseover="zoomIn(event)" onmouseleave="zoomOut(event)" onClick="location.href='login.jsp'"></td>
+<td><img src="image/join.png" class="button" alt="join" onmouseover="zoomIn(event)" onmouseleave="zoomOut(event)" onClick="location.href='sign_up.jsp'"></td>
 </tr>
 </table>
 
