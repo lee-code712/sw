@@ -8,39 +8,23 @@
 <head>
 <meta charset="UTF-8">
 <title>Main</title>
-<style>
-div.main {
-width:1200px;
-margin:0 auto;
-}
-#myPage {
-width:300px;
-height:300px;
-border:1px solid gray;
-}
-#calendar {
-width:900px;
-height:500px;
-}
-#temp {
-height:200px;
-}
-#main_logo {
-width:20%;
-height:20%;
-}
-</style>
+<link type="text/css" rel="stylesheet" href="main_style.css"></link>
 </head>
 
 <body>
+<header>
 <div class="main" align="center">
 <img src="image/main_logo_resize.png" id="main_logo" alt="main">
 </div>
+</header>
 
-<div class="main">
-<span>헤더 위치</span><span style="float:right;">OO님 환영합니다!</span>
-<p/>
-</div>
+<nav>
+	<ul>
+		<li><a href="search.jsp">검&nbsp;&nbsp;&nbsp;&nbsp;색</a></li>
+        <li>상담예약</li>
+        <li><a href="../message/message.jsp">쪽&nbsp;&nbsp;&nbsp;&nbsp;지</a></li>
+    </ul>
+</nav>
 
 <div class="main" align="center">
 <table id="main_table">
@@ -61,8 +45,6 @@ height:20%;
 <hr/>
 </div>
 
-<div class="main" align="left">
-푸터 위치
-</div>
+<footer></footer>
 </body>
 </html>
