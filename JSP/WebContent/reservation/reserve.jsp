@@ -83,7 +83,7 @@
    	<tr>
     	<td>
     		<br><br>
-        	<input type=submit value="완료">
+        	<input type=submit value="완료" onClick="location.href='Main_cal+menu.jsp'">
        	</td>
   	</tr>
 </table>
