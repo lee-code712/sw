@@ -53,8 +53,8 @@ left:162px;
 <nav>
 	<ul>
 		<li><a href="search.jsp">검&nbsp;&nbsp;&nbsp;&nbsp;색</a></li>
-        <li>상담예약</li>
-        <li>쪽&nbsp;&nbsp;&nbsp;&nbsp;지</li>
+        <li><a href="../reservation/index1.jsp">상담예약</a></li>
+        <li><a href="../message/message.jsp">쪽&nbsp;&nbsp;&nbsp;&nbsp;지</a></li>
     </ul>
 </nav>
 <div class="main" align="center">
