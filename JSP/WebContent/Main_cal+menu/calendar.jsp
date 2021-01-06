@@ -1,5 +1,3 @@
-<%-- 최적 브라우저: Chrome browser --%>
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="java.util.Calendar"%>
 <%!
@@ -31,26 +29,26 @@
 <title>Calendar</title>
 <style>
 #top {
-	width: 600px;
+	width: 900px;
 	font-weight:bold;
 }
 #top_year {
-	width:200px;
+	width:300px;
 	text-align:left;
 }
 #top_month {
-	width:200px;
+	width:300px;
 	text-align:center;
 }
 #top_date {
-	width:200px;
+	width:300px;
 	text-align:right;
 }
 #calendar {
 	border:1px solid gray;
 	border-collapse:collapse;
-	width:600px;
-	height:250px;
+	width:900px;
+	height:500px;
 	text-align:center;
 }
 #td_cal {
