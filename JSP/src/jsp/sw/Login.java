@@ -9,19 +9,31 @@ public class Login {
 		Connection conn = null;
         Statement st = null;       
         ResultSet rs = null;
+        String sql = "select * from "; 
+        String id_field;
+        
         boolean id_check = false;
         boolean pw_check = false;
+        
+        if(p.equals("0")) {
+        	sql += "student_member";
+        	id_field = "s_user_id";
+        }
+        else {
+        	sql += "professor_member";
+        	id_field = "p_user_id";
+        }
         
         try {
             Connect ct = new Connect();
             conn = ct.getConnection();
-            //일단 student_member에 dwu20180673/pak1234/20180673로 하나 생성해서 테스트 했음! 
-            String sql = "select * from student_member";           
+            
+                    
             st = conn.createStatement();
             rs = st.executeQuery(sql);
             
             while(rs.next()) {
-            	String empid = rs.getString("s_user_id");
+            	String empid = rs.getString(id_field);
             	String emppwd = rs.getString("password");
             	if(id.equals(empid)) {
             		id_check = true;
