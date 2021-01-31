@@ -196,7 +196,7 @@
 
 <body>
 <%--헤더 --%>
-<div id="logo"><a href="#"><img src="image/logo.png" width="109" height="50"></a></div>
+<div id="logo"><a href="#"><img src="image/logo1.png" width="109" height="50"></a></div>
 
 <div id="list">
 <ul>

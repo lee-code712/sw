@@ -48,6 +48,14 @@
 	height: 42px;
 	border: 0;
 }
+#link_table {
+	margin: 0px auto;
+	width: 220px;
+	height: 40px;
+}
+#link {
+	color: gray;
+}
 </style>
 
 <title>Login</title>
@@ -92,6 +100,13 @@
 
 <input type="submit" id="login_button" alt="login button" value="">
 </form>
+
+<table id = "link_table">
+	<tr>
+		<td><a href="join.jsp" id="link">회원 가입</a></td>
+		<td><a href="find_pw.jsp" id="link">패스워드 찾기</a></td>
+	</tr>
+</table>
 </div>
 </body>
 </html>
