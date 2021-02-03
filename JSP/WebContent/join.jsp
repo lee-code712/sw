@@ -11,13 +11,18 @@
 	function ck_join_form()
 	{
     	var form = document.join_form;
-
+        
+    	if(!form.univ.value){
+        	alert("대학명을 입력해 주세요.");
+        	return false;
+    	}
+    	
     	if(!form.stuID.value){
     	    alert("학번을 입력해 주세요.");
    	    	return false;
    		}
     
-    	if(form.ck_stuID.value != "checked"){
+    	if(form.isChecked.value != "checked"){ // 이거 작동이 안 됨 ㅠㅠ
         	alert("학번 중복체크를 해 주세요.");
         	return false;
     	}
@@ -31,24 +36,12 @@
     	if(form.pw.value != form.pw_ck.value ){
         	alert("비밀번호와 비밀번호 확인에 입력된 값이 일치하지 않습니다.");
         	return false;
-    	}    
-    
-    	if(!form.univ.value){
-        	alert("대학명을 입력해 주세요.");
-        	return false;
     	}
 	}
 
 	function ck_stuID(){
     	window.name = "parentForm";
-    	window.open("아이디 체크 페이지.jsp", "ckForm", "width=500, height=300, resizable = no, scrollbars = no");    
-	}
-
-	// 아이디 입력창에 값 입력시 hidden에 idUncheck를 세팅한다.
-	// 이렇게 하는 이유는 중복체크 후 다시 아이디 창이 새로운 아이디를 입력했을 때
-	// 다시 중복체크를 하도록 한다.
-	function ck_stuID_checked(){
-    	document.join_form.isChecked.value ="unchecked";
+    	window.open("join_stuIDCheck.jsp", "ckForm", "width=500, height=300, resizable = no, scrollbars = no");
 	}
 </script>
 
@@ -86,6 +79,7 @@
 }
 .join_form_input_td {
 	border: 1.5px solid #c4c4c4;
+	text-align: left;
 }
 .join_form_input {
 	width: 355px;
@@ -121,7 +115,6 @@
 	height: 40px;
 	border: 0;
 }
-
 </style>
 
 <title>Join</title>
@@ -146,7 +139,7 @@
 
 <p>
 
-<form name="join_form" onsubmit="return ck_join_form()">
+<form method="post" action="join_addMember.jsp" name="join_form" onsubmit="return ck_join_form()">
 <table id="join_form_table">
 <tr>
 	<td class="join_form_left_td">대학명</td>
@@ -157,9 +150,9 @@
 <tr>
 	<td class="join_form_left_td">학번</td>
 	<td class="join_form_input_td">
-		<input type="text" id="join_form_stuID" name="stuID" maxlength="10" onkeydown="ck_stuID_checked()"/>
-		<input type="submit" id="same_check_button_join" alt="check button" value="" onclick="ck_stuID()">
-		<input type="hidden" name="isChecked" value="unchecked">
+		<input type="text" id="join_form_stuID" name="stuID" maxlength="10" value="" disabled/>
+		<input type="button" id="same_check_button_join" alt="check button" value="" onclick="ck_stuID()">
+		<input type="hidden" id="join_isChecked" name="isChecked" value="unchecked">
 	</td>
 </tr>
 <tr>
