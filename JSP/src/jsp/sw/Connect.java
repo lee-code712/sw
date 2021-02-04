@@ -9,8 +9,8 @@ public class Connect {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             String url ="jdbc:oracle:thin:@localhost:1521:xe";
-            String user ="yrg";
-            String password ="yrg";
+            String user ="dwu";
+            String password ="dwu_pass";
             conn = DriverManager.getConnection(url, user, password);
         } catch (ClassNotFoundException e) {
             System.out.println("driver load 실패!");
