@@ -11,8 +11,8 @@ public class Connect_univ {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             String url ="jdbc:oracle:thin:@localhost:1521:xe";
-            String user ="UNIV_M"; // 각자 변경
-            String password ="UNIV_M"; // 각자 변경
+            String user = "univ_m"; // 각자 변경
+            String password = "univ_m"; // 각자 변경
             conn = DriverManager.getConnection(url, user, password);
         } catch (ClassNotFoundException e) {
             System.out.println("driver load 실패!");
