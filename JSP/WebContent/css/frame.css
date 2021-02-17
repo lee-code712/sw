@@ -1,39 +1,122 @@
 @charset "UTF-8";
 /* header, nav에 대한 css파일 */
-     #logo {
-         position: absolute;
-         top: 15px;
-         left: 403px;
-      }
-      
-      #list {
-         position: absolute;
-         top: 30px;
-         left: 591px;
-      }
-   
-      #list ul {
-         list-style: none;
-         padding: 0;
-         margin: 0;
-      }
-   
-      #list li {
-         display: inline;
-      }
-   
-      #list a {
-         text-decoration: none;
-         color: #000000;
-         padding: 0 15px;
-      }
-   
-      #list a:hover {
-         color: #88BFF1;
-      }
-   
-      #myPage {
-         position: absolute;
-         top: 25px;
-         left: 1346px;
-      }
+     * {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		text-decoration: none;
+	}
+	
+	#header {
+		margin: 0 auto;
+		width: 1616px;
+		height: 100px;
+		background-color: white;
+		border-radius: 0 0 10px 10px;
+		margin-bottom: 25px;
+	}
+	
+	.inner_header {
+		width: 1280px;
+		height: 100%;
+		margin: 0 auto;
+	}
+	
+	.logo_container {
+		height: 100%;
+		display: table;
+		float: left;
+		margin-right: 60px;
+	}
+	
+	.logo_container h1 {
+		color: #819ADE;
+		height: 100%;
+		display: table-cell;
+		vertical-align: middle;
+		font-family: 'Roboto';
+		font-size: 24px;
+		cursor: pointer;
+	}
+	
+	.nav1 {
+		float: left;
+		height: 100%;
+	}
+	
+	.nav1 li {
+		height: 100%;
+		display: table;
+		float: left;
+		padding: 0px 20px;
+	}
+	
+	.nav1 li a {
+		display: table-cell;
+		vertical-align: middle;
+		height: 100%;
+		color: #767676;
+		font-family: 'Roboto';
+		font-size: 14px;
+	}
+	
+	.nav1 li a:hover {
+		color: #819ADE;
+		cursor: pointer;
+	}
+	
+	.nav2 {
+		float: right;
+		height: 100%;
+	}
+	
+	.nav2 li {
+		height: 100%;
+		display: table;
+		float: left;
+		padding: 0px 20px;
+	}
+	
+	.nav2 li:last-child {
+		padding-right: 0;
+	}
+	
+	.nav2 li a {
+		display: table-cell;
+		vertical-align: middle;
+		height: 100%;
+		color: #767676;
+		font-family: 'Roboto';
+		font-size: 14px;
+	}
+	
+	#login {
+		display: table-cell;
+		margin-top: 32px;
+		font-family: 'Roboto';
+		width: 90px;
+		height: 36px;
+		color: white;
+		background: #819ADE;
+		font-size: 14px;
+		border: none;
+		border-radius: 30px;
+		box-shadow: 0px 5px 10px #c4c4c4;
+	}
+	
+	#login:focus {
+		outline: 0;
+	}
+	
+	#login:hover {
+		background: white;
+		color: #819ADE;
+		border: solid #819ADE 1px;
+		cursor: pointer;
+		box-shadow: 0 2px 4px rgba(0,79,255,0.6);
+	}
+	
+	.nav2 li a:hover {
+		color: #819ADE;
+		cursor: pointer;
+	}
