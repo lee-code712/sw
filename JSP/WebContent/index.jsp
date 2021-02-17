@@ -10,42 +10,40 @@
 </head>
 
 <body>
-<%--헤더 --%>
-<div id="logo"><a href="#"><img src="image/logo.png" width="109" height="50"></a></div>
-
-<div id="list">
-<ul>
-   <li><a href="#">공지사항</a><li><%for(int i = 0; i < 6; i++){%>&nbsp;<%}%>
-   <li><a href="#">상담예약</a><li><%for(int i = 0; i < 6; i++){%>&nbsp;<%}%>
-   <li><a href="#">쪽지함</a><li>
-</ul>
-</div>
-
-<div id="myPage"><a href="#"><img src="image/user.svg" width="30" height="30"></a></div>
-
-<div id="login">
-   <button id="login_btn">로그인</button>
-</div>
-
-<%--그림 --%>
-<div id="counseling"><img src="image/counseling.png" width="528" height="338"></div>
-<div id="explain2"></div>
-<div id="explain3">상담-E</div>
-<div id="explain4">교수-학생 간 상담 일정 관리 서비스</div>
-
-<%--상담일정 --%>
-<div id="schedule1"></div>
-<table id="schedule2"><td>상담일정</td></table>
-
-<%-- 공지사항 --%>
-<hr id="hr3">
-<div id="announcement">공지사항<%for(int i = 0; i < 42; i++){%>&nbsp;<%}%><a href="#" id="announcement2">+전체보기</a></div>
-
-<%--알림 --%>
-<hr id="hr4">
-<div id="notice">알림<%for(int i = 0; i < 48; i++){%>&nbsp;<%}%><a href="#" id="notice2">+전체보기</a></div>
-
-<%--footer --%>
-<table id="footer"><td>2021 all rights reserved.<p>Made with Lee You ri, Yoon Ra Kyung, Kim Hye Ran</td></table>
+	<div id="header">
+		<div class="inner_header">
+			<div class="logo_container">
+				<h1><a>상담E*</a></h1>
+			</div>
+		
+			<ul class="nav1">
+				<li><a>공지사항</a></li>
+				<li><a>상담예약</a></li>
+				<li><a>쪽지함</a></li>
+			</ul>
+			
+			<ul class="nav2">
+				<li><a><img src="image/user.png">&nbsp;마이페이지</a></li>
+				<li><button id="login">로그인</button></li>
+			</ul>
+		</div>
+	</div>
+	
+	<img src="image/banner.png">
+	<div id="explain">
+		교수-학생 간<p>상담일정 관리 서비스<p>
+		<button id="reserve">예약하기&nbsp;→</button>
+	</div>
+	
+	<div id="calendar_header">상담일정</div>
+	<div id="calendar_body"></div>
+	
+	<div id="announcement_header">공지사항<a>+전체보기</a></div>
+	<div id="announcement_body"></div>
+	
+	<div id="notice_header">알림<a>+전체보기</a></div>
+	<div id="notice_body"></div>
+	
+	<table id="footer"><tr><td>2021 all rights reserved.<p>Made with Lee You ri, Yoon Ra Kyung, Kim Hye Ran</td></tr></table>
 </body>
 </html>
