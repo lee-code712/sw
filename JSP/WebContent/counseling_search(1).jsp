@@ -127,6 +127,6 @@
   </script>
   
 	<%--footer --%>
-	<table id="footer"><td>2021 all rights reserved.<p>Made with Lee You ri, Yoon Ra Kyung, Kim Hye Ran</td></table>
+	<table id="footer"><tr><td>2021 all rights reserved.<p>Made with Lee Yu ri, Yoon Ra Kyung, Kim Hye Ran</td></tr></table>
 </body>
 </html>

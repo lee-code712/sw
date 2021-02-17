@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/* login.java에 대한 css파일 */
+	#main_login {
+		margin: 0px auto;
+		width: 641px;
+		height: 603px;
+		border: 1.5px solid #c4c4c4;
+		border-radius: 0.5em;
+		text-align: center;
+	}
+	#title_login {
+		font-size: 20px;
+	}
+	#login_form_table {
+		margin: 0px auto;
+		width: 549px;
+		height: 196px;
+	}
+	#position_st {
+		margin: 0px auto;
+		width: 90px;
+		height: 25px;
+		border: 1.5px solid #c4c4c4;
+	}
+	#id_st {
+		width: 355px;
+		height: 40px;
+		border: 1.5px solid #c4c4c4;
+		border-radius: 20px;
+	}
+	#pwd_st {
+		width: 355px;
+		height: 40px;
+		border: 1.5px solid #c4c4c4;
+		border-radius: 20px;
+	}
+	#login_button {
+		background: url(image/login_button.png);
+		background-repeat: no-repeat;
+		width: 212px;
+		height: 42px;
+		border: 0;
+	}
+	#link_table {
+		margin: 0px auto;
+		width: 220px;
+		height: 40px;
+	}
+	#link {
+		color: gray;
+	}
+	#login_btn {
+		border: 1px solid #88BFF1;
+		background-color: #88BFF1;
+		color: #FFFFFF;
+		padding: 5px;
+		border-radius: 5px;
+	}
+		
+	#login button {
+		position: absolute;
+		top: 25px;
+		left: 1401px;
+		border: 1px solid #88BFF1;
+		background-color: #88BFF1;
+		color: white;
+		padding: 5px 20px 5px 20px;
+	}
+	
+	#login button:hover {
+		color: #88BFF1;
+		background-color: white;
+	}
+		
+	#hr {
+		position: absolute;
+		top: 74px;
+		width: 1900px;
+		border: 1px solid #C4C4C4;
+	}
+	#footer {
+			position: absolute;
+			top: 974px;
+			width: 1900px;
+			height: 210px;
+			background-color: #F9F9F9;
+			vertical-align: middle;
+			text-align: center;
+		}

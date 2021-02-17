@@ -16,12 +16,13 @@
 	String id = request.getParameter("id");
 	String pwd = request.getParameter("pwd");
 	
-	int ck = Login.check_login(posit, id, pwd);
-	if(ck == -1 || ck == -2) {
+	String ck = Login.check_login(posit, id, pwd);
+	if(ck == "-1" || ck == "-2") {
 		response.sendRedirect("login.jsp?ck=" + ck);
 		
 	}
 	else {
+		session.setAttribute("univ", ck);
 		session.setAttribute("id", id);
 		response.sendRedirect("index.jsp");
 	}
