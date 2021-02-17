@@ -41,7 +41,8 @@
 
 	function ck_stuID(){
     	window.name = "parentForm";
-    	window.open("join_stuIDCheck.jsp", "ckForm", "width=500, height=300, resizable = no, scrollbars = no");
+    	window.open("join_sessionRemove.jsp");
+    	openWin = window.open("join_stuIDCheck.jsp", "ckForm", "width=500, height=300, resizable = no, scrollbars = no");
 	}
 </script>
 
@@ -139,18 +140,18 @@
 
 <p>
 
-<form method="post" action="join_addMember.jsp" name="join_form" onsubmit="return ck_join_form()">
+<form method="post" action="join_stuAddMember.jsp" name="join_form" onsubmit="return ck_join_form()">
 <table id="join_form_table">
 <tr>
 	<td class="join_form_left_td">대학명</td>
 	<td class="join_form_input_td">
-		<input type="text" id="join_form_univ" class="join_form_input" maxlength="40" name="univ"/>
+		<input type="text" id="join_form_univ" class="join_form_input" maxlength="40" name="univ" value="학번 중복체크 창에서 입력하세요" disabled/>
 	</td>
 </tr>
 <tr>
 	<td class="join_form_left_td">학번</td>
 	<td class="join_form_input_td">
-		<input type="text" id="join_form_stuID" name="stuID" maxlength="10" value="" disabled/>
+		<input type="text" id="join_form_stuID" name="stuID" maxlength="10" value="우측 중복체크 버튼 클릭" disabled/>
 		<input type="button" id="same_check_button_join" alt="check button" value="" onclick="ck_stuID()">
 		<input type="hidden" id="join_isChecked" name="isChecked" value="unchecked">
 	</td>
@@ -158,7 +159,7 @@
 <tr>
 	<td class="join_form_left_td">아이디</td>
 	<td class="join_form_input_td">
-		<input type="button" id="join_form_ID" class="join_form_input" name="id" disabled />
+		<input type="text" id="join_form_ID" class="join_form_input" name="id" value="학번 확인 시 자동으로 생성됩니다" disabled />
 	</td>
 </tr>
 <tr>

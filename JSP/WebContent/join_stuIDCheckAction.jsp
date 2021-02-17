@@ -1,7 +1,7 @@
 <%-- 학번 중복 확인 로직, join_idCheck.java 호출 --%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="jsp.sw.Join_idCheck"%>
+    pageEncoding="UTF-8" import="jsp.sw.*"%>
 <% request.setCharacterEncoding("UTF-8"); %> 
 <!DOCTYPE html>
 <html>
@@ -12,12 +12,18 @@
 <body>
 <%
 	String stuID = request.getParameter("stuID");
+	String univ = request.getParameter("univ");
 	
 	int stuID_ck = Join_idCheck.check_ID(stuID, "0");
-	session.setAttribute("ck", stuID_ck); // session에 저장했기 때문에 학번 미중복이 한 번이라도 확인되면 수정이 불가능한 문제...
+	session.setAttribute("ck", stuID_ck);
 	
-	if (stuID_ck == 1) // 학번이 미중복이면 세션에 학번 값 저장
+	if (stuID_ck == 1) { // 학번이 유효하면 아이디 생성 후 세션에 학번,대학 및 아이디 저장
 		session.setAttribute("join_stuID", stuID); 
+		session.setAttribute("univ", univ);
+		
+		String userID = Join_idMake.make_ID(stuID, "0", univ);
+		session.setAttribute("userID", userID);
+	}
 	
 	response.sendRedirect("join_stuIDCheck.jsp");
 %>

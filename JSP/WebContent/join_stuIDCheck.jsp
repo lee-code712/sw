@@ -9,7 +9,9 @@
 
 <script>
 	function setParentText() { // 부모 페이지(join.jsp)로 값을 보냄... 겉으로는 보내진 것처럼 보이나 value에 값이 들어가지 않는 문제... 해결 필요...
+		opener.document.getElementById("join_form_univ").value = document.getElementById("univ").value
 		opener.document.getElementById("join_form_stuID").value = document.getElementById("userStuID").value
+		opener.document.getElementById("join_form_ID").value = document.getElementById("userID").value
 		opener.document.getElementById("join_isChecked").value = document.getElementById("isChecked").value
 		window.close()
 	}
@@ -35,27 +37,33 @@
     <br>
     <%
     	String join_stuID = (String)session.getAttribute("join_stuID");
+    	Integer stuID_ck = (Integer)session.getAttribute("ck");
+    	String univ = (String)session.getAttribute("univ");
+    	
+    	if (univ == null)
+    		out.println("대학명: <input type=\"text\" id=\"univ\" name=\"univ\">");
+    	else
+    		out.println("대학명: <input type=\"text\" id=\"univ\" name=\"univ\" value=\"" + univ + "\" disabled />");
+    	out.println("<p/>");
     	
     	if (join_stuID == null)
     		out.println("<input type=\"text\" id=\"userStuID\" name=\"stuID\" maxlength=\"10\"/>");
     	else
 			out.println("<input type=\"text\" id=\"userStuID\" name=\"stuID\" maxlength=\"10\" value=\"" + join_stuID + "\" disabled />");
-	%>
-	<input type="submit" value="중복 확인">
-	<br/>
-	<input id="cancelBtn" type="button" value="취소" onclick="window.close()">
-	<%
-	out.println("<input type=\"hidden\" id=\"isChecked\" name=\"isChecked\" value=\"checked\">");
-	%>
-	
-	<%
-		Integer stuID_ck = (Integer)session.getAttribute("ck");
-		
+    	
+    	out.println("<input type=\"submit\" value=\"중복 확인\">");
+    	out.println("<br/>");
+    	out.println("<input id=\"cancelBtn\" type=\"button\" value=\"취소\" onclick=\"window.close()\">");
+    	
 		if (stuID_ck != null) {
-			if(stuID_ck == 0)
+			if(stuID_ck == -1)
+				out.println("<script>alert('존재하지 않는 학번입니다.');</script>");
+			else if(stuID_ck == 0)
 				out.println("<script>alert('이미 가입된 학번입니다.');</script>");
 			else {
-				out.println("<script>alert('사용 가능한 학번입니다. 확인 버튼을 눌러 주세요');</script>");
+				out.println("<script>alert('사용 가능한 학번입니다. 확인 버튼을 눌러 주세요.');</script>");
+				out.println("<input type=\"hidden\" id=\"isChecked\" name=\"isChecked\" value=\"checked\">");
+				out.println("<input type=\"hidden\" id=\"userID\" name=\"userID\" value=\"" + session.getAttribute("userID") + "\">");
 				out.println("<input id=\"ckBtn\" type=\"button\" value=\"확인\" onclick=\"setParentText()\">");
 			}
 		}
