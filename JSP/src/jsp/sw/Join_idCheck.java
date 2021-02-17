@@ -8,7 +8,7 @@ import jsp.sw.DisConnect;
 
 public class Join_idCheck {
 
-	public static int check_ID(String stu_prof_id, String p) {
+	public static int check_ID(String stu_prof_id, String p, String univ) {
 		Connection conn = null;
         Statement st = null;       
         ResultSet rs = null;
@@ -29,7 +29,7 @@ public class Join_idCheck {
         
         try {
             Connect ct = new Connect();
-            conn = ct.getConnection();
+            conn = ct.getConnection(univ);
                   
             st = conn.createStatement();
             rs = st.executeQuery(sql);

@@ -9,7 +9,7 @@ import jsp.sw.DisConnect;
 
 public class Join {
 	
-	public static int add_member(String p, String stu_prof_id, String user_id, String pw) {
+	public static int add_member(String p, String stu_prof_id, String user_id, String pw, String univ_id) {
 		Connection conn = null;
         Statement st = null;       
         ResultSet rs = null;
@@ -26,8 +26,8 @@ public class Join {
         sql += "('" + user_id + "', '" + pw + "', '" + stu_prof_id + "')";
         
         try {
-            Connect ct = new Connect(); // 이 부분 추후 각 대학별 테이블스페이스에 연동하는 것으로 수정
-            conn = ct.getConnection();
+            Connect ct = new Connect();
+            conn = ct.getConnection(univ_id);
                   
             st = conn.createStatement();
             rs = st.executeQuery(sql);

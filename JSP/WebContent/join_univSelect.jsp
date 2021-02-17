@@ -11,6 +11,7 @@
 <body>
 <%
 	session.setAttribute("univ", request.getParameter("univ"));
+	session.setAttribute("univ_id", request.getParameter("univ_id"));
 	response.sendRedirect("join.jsp");
 %>
 </body>

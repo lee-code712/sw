@@ -20,7 +20,7 @@
 	Statement st = null;       
 	ResultSet rs = null;
 	
-	String sql = "select univ_name from university where univ_name like " + input;
+	String sql = "select * from university where univ_name like " + input;
 	
 	try {
 	    Connect_univ ct = new Connect_univ();
@@ -36,8 +36,9 @@
 	    	out.println("<b>검색 결과</b> <p/>");
 	    	
 	    	String univ = rs.getString("univ_name");
+	    	String univ_id = rs.getString("univ_id");
 	    	out.print(univ + " ");
-	    	out.print("<input type=\"button\" value=\"선택\" onclick=\"location.href='join_univSelect.jsp?univ=" + univ + "'\"/>");
+	    	out.print("<input type=\"button\" value=\"선택\" onclick=\"location.href='join_univSelect.jsp?univ=" + univ + "&univ_id=" + univ_id + "'\"/>");
 	    	out.println("<br/>");
 	    	
 	    	while(rs.next()) {

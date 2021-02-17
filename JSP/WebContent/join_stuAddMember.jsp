@@ -16,8 +16,9 @@
 	String stuID = (String)session.getAttribute("join_stuID");
 	String userID = (String)session.getAttribute("userID");
 	String pw = request.getParameter("pw");
+	String univ_id = (String)session.getAttribute("univ_id");
 	
-	int flag = Join.add_member("0", stuID, userID, pw);
+	int flag = Join.add_member("0", stuID, userID, pw, univ_id);
 
 	if(flag == 0) {
 		out.println("<script>");
