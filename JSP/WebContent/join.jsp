@@ -22,7 +22,7 @@
    	    	return false;
    		}
     
-    	if(form.isChecked.value != "checked"){ // 이거 작동이 안 됨 ㅠㅠ
+    	if(form.isChecked.value != "checked"){ 
         	alert("학번 중복체크를 해 주세요.");
         	return false;
     	}
@@ -125,11 +125,11 @@
 <div id="main_join">
 <p id="title_join"><b>회원가입</b></p>
 
-<form name="search_univ_form">
+<form method="post" action="join_univSearch.jsp" name="search_univ_form">
 <table id="search_univ_table">
 <tr>
 	<td>
-		<input type="text" id="search_univ" maxlength="40"/>
+		<input type="text" id="search_univ" name="univ_name" maxlength="40" value="검색하고자 하는 대학명을 입력해 주세요" onfocus="this.value=''"/>
 	</td>
 	<td>
 		<input type="submit" id="search_button_join" alt="search button" value="">
@@ -145,7 +145,13 @@
 <tr>
 	<td class="join_form_left_td">대학명</td>
 	<td class="join_form_input_td">
-		<input type="text" id="join_form_univ" class="join_form_input" maxlength="40" name="univ" value="학번 중복체크 창에서 입력하세요" disabled/>
+		<%
+			String univ = (String)session.getAttribute("univ");
+			if(univ == null)
+				out.println("<input type=\"text\" id=\"join_form_univ\" class=\"join_form_input\" maxlength=\"40\" name=\"univ\" value=\"검색 창에서 입력하세요\" disabled/>");
+			else
+				out.println("<input type=\"text\" id=\"join_form_univ\" class=\"join_form_input\" maxlength=\"40\" name=\"univ\" value=\"" + univ + "\" disabled/>");
+		%>	
 	</td>
 </tr>
 <tr>

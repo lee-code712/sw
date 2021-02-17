@@ -18,10 +18,6 @@
 	if (session.getAttribute("ck") != null ) {
 		session.removeAttribute("ck");
 	}
-	
-	if (session.getAttribute("univ") != null){
-		session.removeAttribute("univ");
-	}
 %>
 <script>window.close();</script>
 </body>

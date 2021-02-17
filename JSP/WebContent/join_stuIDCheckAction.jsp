@@ -12,7 +12,7 @@
 <body>
 <%
 	String stuID = request.getParameter("stuID");
-	String univ = request.getParameter("univ");
+	String univ = (String)session.getAttribute("univ");
 	
 	int stuID_ck = Join_idCheck.check_ID(stuID, "0");
 	session.setAttribute("ck", stuID_ck);

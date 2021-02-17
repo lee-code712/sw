@@ -8,6 +8,7 @@ import jsp.sw.Connect_univ;
 import jsp.sw.DisConnect;
 
 public class Join {
+	
 	public static int add_member(String p, String stu_prof_id, String user_id, String pw) {
 		Connection conn = null;
         Statement st = null;       

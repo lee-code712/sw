@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 
 <script>
-	function setParentText() { // 부모 페이지(join.jsp)로 값을 보냄... 겉으로는 보내진 것처럼 보이나 value에 값이 들어가지 않는 문제... 해결 필요...
+	function setParentText() {
 		opener.document.getElementById("join_form_univ").value = document.getElementById("univ").value
 		opener.document.getElementById("join_form_stuID").value = document.getElementById("userStuID").value
 		opener.document.getElementById("join_form_ID").value = document.getElementById("userID").value
@@ -40,8 +40,10 @@
     	Integer stuID_ck = (Integer)session.getAttribute("ck");
     	String univ = (String)session.getAttribute("univ");
     	
-    	if (univ == null)
-    		out.println("대학명: <input type=\"text\" id=\"univ\" name=\"univ\">");
+    	if (univ == null) {
+    		out.println("<script>alert('먼저 대학명을 검색해 주세요!');</script>");
+    		out.println("<script>window.close();</script>");
+    	}
     	else
     		out.println("대학명: <input type=\"text\" id=\"univ\" name=\"univ\" value=\"" + univ + "\" disabled />");
     	out.println("<p/>");
