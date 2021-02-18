@@ -36,7 +36,7 @@
 	    	out.println("<b>검색 결과</b> <p/>");
 	    	
 	    	String univ = rs.getString("univ_name");
-	    	String univ_encoded = URLEncoder.encode(univ, "UTF-8");
+	    	String univ_encoded = URLEncoder.encode(URLEncoder.encode(univ, "UTF-8"), "UTF-8");
 	    	String univ_id = rs.getString("univ_id");
 	    	out.print(univ + " ");
 	    	out.print("<input type=\"button\" value=\"선택\" onclick=\"location.href='join_univSelect.jsp?univ=" + univ_encoded + "&univ_id=" + univ_id + "'\"/>");
@@ -44,6 +44,8 @@
 	    	
 	    	while(rs.next()) {
 		    	univ = rs.getString("univ_name");
+		    	univ_encoded = URLEncoder.encode(URLEncoder.encode(univ, "UTF-8"), "UTF-8");
+		    	univ_id = rs.getString("univ_id");
 		    	out.print(univ + " ");
 		    	out.print("<input type=\"button\" value=\"선택\" onclick=\"location.href='join_univSelect.jsp?univ=" + univ_encoded + "&univ_id=" + univ_id + "'\"/>");
 		    	out.println("<br/>");
