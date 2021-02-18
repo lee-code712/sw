@@ -45,7 +45,7 @@
 	    	while(rs.next()) {
 		    	univ = rs.getString("univ_name");
 		    	out.print(univ + " ");
-		    	out.print("<input type=\"button\" value=\"선택\" onclick=\"location.href='join_univSelect.jsp?univ=" + univ + "&univ_id=" + univ_id + "'\"/>");
+		    	out.print("<input type=\"button\" value=\"선택\" onclick=\"location.href='join_univSelect.jsp?univ=" + univ_encoded + "&univ_id=" + univ_id + "'\"/>");
 		    	out.println("<br/>");
 		    }
 	    }
