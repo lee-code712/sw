@@ -1,7 +1,7 @@
 <%-- 대학 검색 페이지 --%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="jsp.sw.*, java.sql.*"%>
+    pageEncoding="UTF-8" import="jsp.sw.*, java.sql.*, java.net.URLEncoder"%>
 <% request.setCharacterEncoding("UTF-8"); %>
 <!DOCTYPE html>
 <html>
@@ -36,15 +36,16 @@
 	    	out.println("<b>검색 결과</b> <p/>");
 	    	
 	    	String univ = rs.getString("univ_name");
+	    	String univ_encoded = URLEncoder.encode(univ, "UTF-8");
 	    	String univ_id = rs.getString("univ_id");
 	    	out.print(univ + " ");
-	    	out.print("<input type=\"button\" value=\"선택\" onclick=\"location.href='join_univSelect.jsp?univ=" + univ + "&univ_id=" + univ_id + "'\"/>");
+	    	out.print("<input type=\"button\" value=\"선택\" onclick=\"location.href='join_univSelect.jsp?univ=" + univ_encoded + "&univ_id=" + univ_id + "'\"/>");
 	    	out.println("<br/>");
 	    	
 	    	while(rs.next()) {
 		    	univ = rs.getString("univ_name");
 		    	out.print(univ + " ");
-		    	out.print("<input type=\"button\" value=\"선택\"/>");
+		    	out.print("<input type=\"button\" value=\"선택\" onclick=\"location.href='join_univSelect.jsp?univ=" + univ + "&univ_id=" + univ_id + "'\"/>");
 		    	out.println("<br/>");
 		    }
 	    }
