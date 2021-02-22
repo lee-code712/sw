@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* header, nav에 대한 css파일 */
-     * {
+    * {
 		margin: 0;
 		padding: 0;
 		list-style: none;
@@ -10,10 +10,9 @@
 	#header {
 		margin: 0 auto;
 		width: 1616px;
-		height: 100px;
+		height: 120px;
 		background-color: white;
 		border-radius: 0 0 10px 10px;
-		margin-bottom: 25px;
 	}
 	
 	.inner_header {
@@ -48,7 +47,7 @@
 		height: 100%;
 		display: table;
 		float: left;
-		padding: 0px 20px;
+		padding: 0px 30px;
 	}
 	
 	.nav1 li a {
@@ -92,7 +91,7 @@
 	
 	#login {
 		display: table-cell;
-		margin-top: 32px;
+		margin-top: 40px;
 		font-family: 'Roboto';
 		width: 90px;
 		height: 36px;
