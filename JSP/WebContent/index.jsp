@@ -29,20 +29,28 @@
 		</div>
 	</div>
 	
-	<img src="image/banner.png">
 	<div id="explain">
-		교수-학생 간<p>상담일정 관리 서비스<p>
+		<div id="ex1">교수-학생 간</div>
+		<div id="ex2">상담일정 관리 서비스</div>
 		<button id="reserve">예약하기&nbsp;→</button>
 	</div>
 	
-	<div id="calendar_header">상담일정</div>
-	<div id="calendar_body"></div>
-	
-	<div id="announcement_header">공지사항<a>+전체보기</a></div>
-	<div id="announcement_body"></div>
-	
-	<div id="notice_header">알림<a>+전체보기</a></div>
-	<div id="notice_body"></div>
+	<div id="section">
+		<div id="calendar">
+			<div id="calendar_header">상담일정</div>
+			<div id="calendar_body"></div>
+		</div>
+		
+		<div id="announcement">
+			<div id="announcement_header">공지사항<a>+전체보기</a></div>
+			<div id="announcement_body"></div>
+		</div>
+		
+		<div id="notice">
+			<div id="notice_header">알림<a>+전체보기</a></div>
+			<div id="notice_body"></div>
+		</div>
+	</div>
 	
 	<table id="footer"><tr><td>2021 all rights reserved.<p>Made with Lee You ri, Yoon Ra Kyung, Kim Hye Ran</td></tr></table>
 </body>
