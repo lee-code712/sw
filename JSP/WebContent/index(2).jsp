@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>index(noLogin)</title>
+<title>index(Login)</title>
 	<link type="text/css" rel="stylesheet" href="css/frame.css"></link>
 	<link type="text/css" rel="stylesheet" href="css/index.css"></link>
 </head>
@@ -24,7 +24,7 @@
 			
 			<ul class="nav2">
 				<li><a><img src="image/user.png">&nbsp;마이페이지</a></li>
-				<li><button id="login" onClick="location.href='login.jsp'">로그인</button></li>
+				<li><%=session.getAttribute("id")%>님 환영합니다!</li>
 			</ul>
 		</div>
 	</div>

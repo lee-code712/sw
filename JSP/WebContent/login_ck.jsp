@@ -24,7 +24,7 @@
 	else {
 		session.setAttribute("univ", ck);
 		session.setAttribute("id", id);
-		response.sendRedirect("index.jsp");
+		response.sendRedirect("index(2).jsp");
 	}
 %>
 </body>
