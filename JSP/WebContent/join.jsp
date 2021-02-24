@@ -30,12 +30,14 @@
     
     	if(!form.pw.value){
         	alert("비밀번호를 입력해 주세요.");
+        	form.pw.focus();
         	return false;
     	}
     
     	// 비밀번호와 비밀번호 확인에 입력된 값이 동일한지 확인
     	if(form.pw.value != form.pw_ck.value ){
         	alert("비밀번호와 비밀번호 확인에 입력된 값이 일치하지 않습니다.");
+        	form.pw.focus();
         	return false;
     	}
 	}
@@ -44,6 +46,16 @@
     	window.name = "parentForm";
     	window.open("join_sessionRemove.jsp");
     	openWin = window.open("join_stuIDCheck.jsp", "ckForm", "width=500, height=300, resizable = no, scrollbars = no");
+	}
+	
+	function ck_search_form(){
+		var form = search_univ_form;
+		
+		if(form.univ_name.value == "") {
+			alert("대학명을 입력해 주세요");
+        	form.univ_name.focus();
+        	return false;
+		}
 	}
 </script>
 
@@ -126,7 +138,7 @@
 <div id="main_join">
 <p id="title_join"><b>회원가입</b></p>
 
-<form method="post" action="join_univSearch.jsp" name="search_univ_form">
+<form method="post" action="join_univSearch.jsp" name="search_univ_form" onsubmit="return ck_search_form()">
 <table id="search_univ_table">
 <tr>
 	<td>

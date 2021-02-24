@@ -7,15 +7,18 @@
 <title>counseling_search(1)</title>
 	<link type="text/css" rel="stylesheet" href="css/frame.css"></link>
 	<link type="text/css" rel="stylesheet" href="css/consel_search(1).css"></link>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script language="javascript">
 		function ck_search_form()
 		{
-    		var form = document.search_prof_form;
-        
-    		if(!form.p_name.value){
-        		alert("교수명을 입력해 주세요.");
-        		return false;
-    	}
+			var form = document.search_prof_form;
+    
+			if(form.p_name.value == ""){
+    			alert("교수명을 입력해 주세요.");
+    			form.p_name.focus();
+    			return false;
+			}
+		}
 	</script>
 <body>
 	<%-- 헤더 --%>
