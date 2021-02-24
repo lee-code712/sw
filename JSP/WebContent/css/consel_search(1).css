@@ -64,6 +64,8 @@
 		}
 		
 		#search {
+			background: url(../image/search.jpg);
+			background-repeat: no-repeat;
 			position: absolute;
 			top: 194px;
 			left: 1449px;

@@ -7,8 +7,16 @@
 <title>counseling_search(1)</title>
 	<link type="text/css" rel="stylesheet" href="css/frame.css"></link>
 	<link type="text/css" rel="stylesheet" href="css/consel_search(1).css"></link>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+		function ck_search_form()
+		{
+    		var form = document.search_prof_form;
+        
+    		if(!form.p_name.value){
+        		alert("교수명을 입력해 주세요.");
+        		return false;
+    	}
+	</script>
 <body>
 	<%-- 헤더 --%>
 	<div id="logo"><a href="#"><img src="image/logo.png" width="109" height="50"></a></div>
@@ -36,9 +44,26 @@
 	<div id="local2"><font color="#88BFF1">상담예약</font></div>
 	
 	<%--교수명 검색 --%>
-	<input type="text" id="p_name" value="교수명">
-	<img src="image/search.jpg" id="search">
-	<div id="square"></div>
+	<form method="post" action="counseling_search_result.jsp" name="search_prof_form" onsubmit="return ck_search_form()">
+	<%
+		String p_name = (String)session.getAttribute("prof_name");
+	
+		out.println("<input type=\"text\" id=\"p_name\" name=\"p_name\" value=\"교수명\" onfocus=\"this.value=''\">");
+		out.println("<input type=\"submit\" id=\"search\" alt=\"search_button\" value=\"\">");
+		
+		if (p_name != null) {
+			// 교수명 검색 결과 출력
+			out.println("<div id=\"square\">");
+			out.println("<jsp:include page=\"counseling_search_result.jsp\" flush=\"false\"/>");
+			out.println("</div>");
+		}
+		else {
+			// 빈 square 출력
+			out.println("<div id=\"square\">");
+			out.println("</div>");
+		}
+	%>
+	</form>
 	
 	<%--단대 선택 --%>
 	<hr id="hr1">
