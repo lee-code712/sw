@@ -20,14 +20,17 @@
 	
 	int flag = Join.add_member("0", stuID, userID, pw, univ_id);
 
-	if(flag == 0) {
+	if(flag == 0) { // 회원가입 실패
 		out.println("<script>");
 		out.println("alert('회원가입에 실패했습니다. 회원가입 페이지로 이동합니다.'); document.location.href=\"join.jsp\"");
 		out.println("</script>");
 	}
-	else {
+	else { // 회원가입 성공
+		// 회원가입 성공 시 세션 해제
+		session.invalidate();
+		
 		out.println("<script>");
-		out.println("alert('회원가입에 성공했습니다. 회원님의 아이디는 " + userID + "입니다.'); document.location.href=\"login.jsp\";"); // 추후 알림창이 아니라 페이지에 회원가입 정보 뜨게 수정
+		out.println("alert('회원가입에 성공했습니다. 회원님의 아이디는 " + userID + "입니다.'); document.location.href=\"login.jsp\";");
 		out.println("</script>");
 	}
 %>
