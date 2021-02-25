@@ -109,21 +109,21 @@
 	vertical-align: middle;
 }
 #search_button_join {
-	background: url(image/search_button.png);
+	background: url('image/search_button.png');
 	background-repeat: no-repeat;
 	width: 40px;
 	height: 40px;
 	border: 0;
 }
 #same_check_button_join {
-	background: url(image/same_check_button.png);
+	background: url('image/same_check_button.png');
 	background-repeat: no-repeat;
 	width: 110px;
 	height: 30px;
 	border: 0;
 }
 #join_button {
-	background: url(image/join_button.png);
+	background: url('image/join_button.png');
 	background-repeat: no-repeat;
 	width: 212px;
 	height: 40px;
