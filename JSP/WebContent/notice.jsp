@@ -6,10 +6,8 @@
 <meta charset="UTF-8">
 <title>notice.jsp</title>
 
-<style>
-  <link type="text/css" rel="stylesheet" href="css/frame.css"></link>
-  <link type="text/css" rel="stylesheet" href="css/notice.css"></link>
-</style>
+<link type="text/css" rel="stylesheet" href="css/frame.css"></link>
+<link type="text/css" rel="stylesheet" href="css/notice.css"></link>
 </head>
 
 <body>
