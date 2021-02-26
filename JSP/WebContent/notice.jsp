@@ -4,12 +4,163 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>notice.jsp</title>
-
+<title>Insert title here</title>
 <link type="text/css" rel="stylesheet" href="css/frame.css"></link>
-<link type="text/css" rel="stylesheet" href="css/notice.css"></link>
-</head>
 
+<style>
+	#banner {
+	  margin: 0 auto;
+		width: 100%;
+		height: 70px;
+		background: #EAF3FA;
+	}
+	
+	#notice_bn {
+		display: block;
+		margin: 0 auto;
+	}
+	
+	#notice_table {
+		display: table;
+		width: 1280px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	
+	#search {
+		height: 35px;
+		width: 350px;
+		border: solid 1.5px #C4C4C4;
+		background: #ffffff;
+		display: block;
+		float: right;
+		margin-top: 80px;
+		margin-bottom: 30px;
+	}
+	
+	#search_text {
+		font-size: 14px;
+		width: 250px;
+		padding: 8px;
+		border: 0px;
+		outline: none;
+		float: left;
+	}
+	
+	#search_btn {
+		width: 34px;
+		height: 34px;
+		border: none;
+		background: #819ADE;
+		outline: none;
+		color: #ffffff;
+		cursor: pointer;
+		float: right;
+	}
+	
+	#search_nav {
+		margin-top: 80px;
+		margin-left: 750px;
+		width: 134px;
+		height: 38px;
+		border: solid 1.5px #C4C4C4;
+	}
+  
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	table {
+    	border-collapse: collapse;
+	}
+
+	caption {
+    	display: none;
+	}
+
+	a {
+   		text-decoration: none;
+    	color: inherit;
+	}
+
+	.board_list_wrap {
+    	padding: 10px;
+	}
+
+	.board_list {
+    	width: 1280px;
+    	border-top: 2px solid #819ADE;
+    	margin: 0 auto;
+	}
+
+	.board_list tr {
+    	border-bottom: 1px solid #ccc;
+	}
+
+	.board_list th,
+	.board_list td {
+    	padding: 10px;
+    	font-size: 14px;
+	}
+
+	.board_list td {
+    	text-align: center;
+	}
+	
+	.board_list .tit {
+    	text-align: left;
+	}
+
+	.board_list .tit:hover {
+    	text-decoration: underline;
+	}
+
+	.board_list_wrap .paging {
+    	margin-top: 50px;
+    	text-align: center;
+    	font-size: 0;
+	}
+
+	.board_list_wrap .paging a {
+    	display: inline-block;
+    	margin-left: 10px;
+    	padding: 5px 10px;
+    	border-radius: 100px;
+    	font-size: 12px;
+	}
+
+	.board_list_wrap .paging a:first-child {
+    	margin-left: 0;
+	}
+
+	.board_list_wrap .paging a.bt {
+    	border: 1px solid #eee;
+   		background: #eee;
+	}	
+
+	.board_list_wrap .paging a.num {
+    	border: 1px solid #819ADE;
+    	font-weight: 600;
+    	color: #819ADE;
+	}
+
+	.board_list_wrap .paging a.num.on {
+    	background: green;
+    	color: #fff;
+	}
+	
+	#footer {
+    position: absolute;
+    top: 1250px;
+    width: 100%;
+    height: 210px;
+    background-color: #F9F9F9;
+    vertical-align: middle;
+    text-align: center;
+  }
+</style>
+</head>
 <body>
 	<div id="header">
 		<div class="inner_header">
