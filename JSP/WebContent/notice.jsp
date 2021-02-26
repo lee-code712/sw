@@ -45,58 +45,153 @@
 			<input type="text" value="검색어를 입력하세요." id="search_text">
 			<img src="image/search.png" id="search_btn">
 		</div>
-	
-		<div class="wrapper">
-    		<div class="tableBox">
-            	<table class="tableData">
-                	<colgroup>
-                    		<col width="8%">
-                    		<col width="40%">
-                    		<col width="20%">
-                    		<col width="10%">
-                    		<col width="8%">
-                	</colgroup>
-                	
-                	<thead>
-                    	<tr>
-                        	<th class="stiky">번호</th>
-                        	<th class="stiky">제목</th>
-                        	<th class="stiky">작성일</th>
-                        	<th class="stiky">작성자</th>
-                       	 	<th class="stiky">조회</th>
-                    	</tr>
-             		</thead>
-                	
-                	<tbody>
-                    	<tr>
-                        	<td>1</td>
-                        	<td>상담 예약 절차</td>
-                        	<td>2021.02.25</td>
-                        	<td>상담E 관리자</td>
-                        	<td>0</td>
-                    	</tr>
-                    
-                    	<tr>
-                        	<td>2</td>
-                        	<td>상담 예약 취소 방법</td>
-                        	<td>2021.02.25</td>
-                        	<td>상담E 관리자</td>
-                        	<td>0</td>
-                    	</tr>
-                    
-                    	<tr>
-                        	<td>3</td>
-                        	<td>상담 예약 절차</td>
-                        	<td>2021.02.25</td>
-                        	<td>상담E 관리자</td>
-                        	<td>0</td>
-                    	</tr>
-            		</tbody>
-    		</table>
-        	</div>
-    		</div>
 	</div>
 	
-  <table id="footer"><tr><td>2021 all rights reserved.<p>Made with Lee You ri, Yoon Ra Kyung, Kim Hye Ran</td></tr></table>
+	<div class="board_list_wrap">
+	<table class="board_list">
+		<caption>게시판 목록</caption>
+			<thead>
+ 			<tr>
+    			<th>번호</th>
+     			<th>제목</th>
+     			<th>작성자</th>
+    			<th>작성일</th>
+    			<th>조회</th>
+   			</tr>
+			</thead>
+			
+			<tbody>
+   			<tr>
+      			<td>1</td>
+      			<td class="tit">
+         			<a href="#">상담 예약 방법</a>
+      			</td>
+      			<td>상담E 관리자</td>
+      			<td>2021-02-26</td>
+      			<td>0</td>
+   			</tr>
+   			<tr>
+      			<td>2</td>
+      			<td class="tit">
+         			<a href="#">상담 예약 취소 방법</a>
+      			</td>
+      			<td>상담E 관리자</td>
+      			<td>2021-02-26</td>
+      			<td>0</td>
+   			</tr>
+   			<tr>
+      			<td>3</td>
+      			<td class="tit">
+         			<a href="#">상담 예약 방법</a>
+      			</td>
+      			<td>상담E 관리자</td>
+      			<td>2021-02-26</td>
+      			<td>0</td>
+   			</tr>
+   			<tr>
+      			<td>4</td>
+      			<td class="tit">
+         			<a href="#">상담 예약 방법</a>
+      			</td>
+      			<td>상담E 관리자</td>
+      			<td>2021-02-26</td>
+      			<td>0</td>
+   			</tr>
+   			<tr>
+      			<td>5</td>
+      			<td class="tit">
+         			<a href="#">상담 예약 취소 방법</a>
+      			</td>
+      			<td>상담E 관리자</td>
+      			<td>2021-02-26</td>
+      			<td>0</td>
+   			</tr>
+   			<tr>
+      			<td>6</td>
+      			<td class="tit">
+         			<a href="#">상담 예약 방법</a>
+      			</td>
+      			<td>상담E 관리자</td>
+      			<td>2021-02-26</td>
+      			<td>0</td>
+   			</tr>
+   			<tr>
+      			<td>7</td>
+      			<td class="tit">
+         			<a href="#">상담 예약 방법</a>
+      			</td>
+      			<td>상담E 관리자</td>
+      			<td>2021-02-26</td>
+      			<td>0</td>
+   			</tr>
+   			<tr>
+      			<td>8</td>
+      			<td class="tit">
+         			<a href="#">상담 예약 방법</a>
+      			</td>
+      			<td>상담E 관리자</td>
+      			<td>2021-02-26</td>
+      			<td>0</td>
+   			</tr>
+   			<tr>
+      			<td>9</td>
+      			<td class="tit">
+         			<a href="#">상담 예약 취소 방법</a>
+      			</td>
+      			<td>상담E 관리자</td>
+      			<td>2021-02-26</td>
+      			<td>0</td>
+   			</tr>
+   			<tr>
+      			<td>10</td>
+      			<td class="tit">
+         			<a href="#">상담 예약 방법</a>
+      			</td>
+      			<td>상담E 관리자</td>
+      			<td>2021-02-26</td>
+      			<td>0</td>
+   			</tr>
+   			<tr>
+      			<td>11</td>
+      			<td class="tit">
+         			<a href="#">상담 예약 취소 방법</a>
+      			</td>
+      			<td>상담E 관리자</td>
+      			<td>2021-02-26</td>
+      			<td>0</td>
+   			</tr>
+   			<tr>
+      			<td>12</td>
+      			<td class="tit">
+         			<a href="#">상담 예약 방법</a>
+      			</td>
+      			<td>상담E 관리자</td>
+      			<td>2021-02-26</td>
+      			<td>0</td>
+   			</tr>
+   			<tr>
+      			<td>13</td>
+      			<td class="tit">
+         			<a href="#">상담 예약 취소 방법</a>
+      			</td>
+      			<td>상담E 관리자</td>
+      			<td>2021-02-26</td>
+      			<td>0</td>
+   			</tr>
+		</tbody>
+	</table>
+
+	<div class="paging">
+   		<a href="#" class="bt">첫 페이지로 이동</a>
+   		<a href="#" class="bt">이전 페이지로 이동</a>
+   		<a href="#" class="num">1</a>
+   		<a href="#" class="num">2</a>
+   		<a href="#" class="num">3</a>
+   		<a href="#" class="bt">다음 페이지</a>
+  		<a href="#" class="bt">마지막 페이지</a>
+	</div>
+</div>
+
+<table id="footer"><tr><td>2021 all rights reserved.<p>Made with Lee You ri, Yoon Ra Kyung, Kim Hye Ran</td></tr></table>
 </body>
 </html>
