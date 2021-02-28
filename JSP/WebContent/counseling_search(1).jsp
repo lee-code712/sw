@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>counseling_search(1)</title>
 	<link type="text/css" rel="stylesheet" href="css/frame.css"></link>
-	<link type="text/css" rel="stylesheet" href="css/consel_search(1).css"></link>
+	<link type="text/css" rel="stylesheet" href="css/counsel_search(1).css"></link>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script language="javascript">
 		function ck_search_form()
