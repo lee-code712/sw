@@ -380,6 +380,7 @@
 		#announcement_body ul li a,
 		#announcement_body ul li span {
     		display: inline-block;
+    		color: black;
     		vertical-align: middle;
 		}
 
@@ -461,6 +462,7 @@
 		#notice_body ul li a,
 		#notice_body ul li span {
     		display: inline-block;
+    		color: black;
     		vertical-align: middle;
 		}
 
@@ -569,7 +571,7 @@
 			</ul>
 				
 			<ul class="gnb_right">
-				<li><a><img src="img/user.png">&nbsp;마이페이지</a></li>
+				<li><a><img src="image/user.png">&nbsp;마이페이지</a></li>
 				<li><button id="login" onClick="location.href='login.jsp'">로그인</button></li>
 			</ul>
 		</div>
