@@ -1,4 +1,4 @@
-<%-- 회원가입 페이지 --%>
+<%-- 회원가입 --%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
