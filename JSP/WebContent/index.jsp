@@ -171,6 +171,7 @@
 			width: 100%;
 			height: 80px;
 			margin: 0 auto;
+			border-bottom: 2px solid #FFC200;
 		}
 		
 		.inner_header {
@@ -190,7 +191,7 @@
 			height: 100%;
 			font-weight: bold;
 			font-size: 24px;
-			color: #819ADE;
+			color: #FFC200;
 			vertical-align: middle;
 			cursor: pointer;
 		}
@@ -216,7 +217,7 @@
 		}
 	
 		.gnb_left li a:hover {
-			color: #819ADE;
+			color: #FFC200;
 			cursor: pointer;
 		}
 	
@@ -249,57 +250,46 @@
 		}
 	
 		.gnb_right li a:hover {
-			color: #819ADE;
+			color: #FFC200;
 			cursor: pointer;
 		}
 	
 		#login {
 			margin-top: 21px;
 			padding: 9px 25px;
-			border: none;
-			border-radius: 50px;
+			border: 1px solid #FFC200;
+			border-radius: 5px;
 			color: white;
-			background-color: #819ADE;
+			background-color: #FFC200;
 			cursor: pointer;
-			transition: all 0.3s ease 0s;
 		}
 	
 		#login:hover {
-			background-color: rgba(0, 136, 169, 0.8);
+			color: #FFC200;
+			background-color: white;
+			border: 1px solid #FFC200;
 		}
 	
 		#banner {
-			display: table;
+			display: table-cell;
 			width: 1920px;
 			height: 430px;
 			margin: 0 auto;
-			background-image: url('image/banner.png');
+			font-size: 24px;
+			text-align: center;
+			vertical-align: middle;
+			background-image: url('image/banner_img.jpg');
 		}
-	
-		#explain {
-			margin-top: 43px;
-			margin-left: 408px;
-			font-size: 34px;
-			color: #819ADE;
-		}
-	
-		#reserve {
-			margin-top: 30px;
-			margin-left: 413px;
-			padding: 10px 20px;
-			border: 2px solid #819ADE;
+
+		#banner a {
 			font-size: 18px;
-			color: #819ADE;
-			background-color: white;		
+		}
+		
+		#banner a:hover {
 			cursor: pointer;
-			transition: all 0.3s ease 0s;
+			color: #FFC200;
 		}
-	
-		#reserve:hover {
-			background-color: rgba(0, 136, 169, 0.8);
-			color: white;
-		}
-	
+		
 		section {
 			display: table;
 			width: 1194px;
@@ -317,9 +307,10 @@
 			width: 602px;
 			height: 40px;
 			padding-left: 10px;
-			border: solid #EAF3FA 1px;
+			border: 1px solid #FFC200;
 			border-radius: 5px 5px 0 0;
-			background-color: #EAF3FA;
+			color: white;
+			background-color: #FFC200;
 			vertical-align: middle;
 		}
 	
@@ -345,7 +336,7 @@
 			padding-left: 10px;
 			border-bottom: solid white 2px;
 			border-radius: 5px 5px 0 0;
-			color: #FC8396;
+			color: black;
 			background-color: #F9F9F9;
 			vertical-align: middle;
 		}
@@ -353,7 +344,7 @@
 		#announcement_header a {
 			float: right;
 			padding-right: 10px;
-			color: #FC8396;
+			color: #FFC200;
 		}
 	
 		#announcement_body {
@@ -428,14 +419,14 @@
 			border-bottom: solid white 2px;
 			border-radius: 5px 5px 0 0;
 			background-color: #F9F9F9;
-			color: #FC8396;
+			color: black;
 			vertical-align: middle;
 		}
 	
 		#notice_header a {
 			float: right;
 			padding-right: 10px;
-			color: #FC8396;
+			color: #FFC200;
 		}
 	
 		#notice_body {
@@ -528,7 +519,7 @@
 	
 		table.calendar td {
 			width: 50px;
-			border: 1px solid skyblue;
+			border: 1px solid #FFC200;
 			border-radius: 5px;
     		vertical-align: top;
 		}
@@ -578,8 +569,9 @@
 	</header>
 	
 	<div id="banner">
-		<div id="explain">교수-학생 간 <p> 상담일정 관리 서비스</div>
-		<button id="reserve">예약하기&nbsp;→</button>
+		교수-학생 간<p> 
+		상담일정 관리 서비스<p>
+		<a>예약하기&nbsp;→</a>
 	</div>
 		
 	<section>
@@ -602,7 +594,7 @@
 		</div>
 		
 		<div id="announcement">
-			<div id="announcement_header">공지사항<a id="more">+전체보기</a></div>
+			<div id="announcement_header"><span style="color: #FFC200">◆ </span>공지사항<a id="more">+전체보기</a></div>
 			<div id="announcement_body">
 				<ul>
             		<li>
@@ -626,7 +618,7 @@
 		</div>
 
 		<div id="notice">
-			<div id="notice_header">알림<a id="more">+전체보기</a></div>
+			<div id="notice_header"><span style="color: #FFC200">◆ </span>알림<a id="more">+전체보기</a></div>
 			<div id="notice_body">
 				<ul>
             		<li>
