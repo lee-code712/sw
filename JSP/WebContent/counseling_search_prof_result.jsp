@@ -21,7 +21,7 @@
 	if (p_name != null) {
 		session.setAttribute(p_name, "prof_name");
 		profs = Search_prof.search(p_name);
-		// String[] profNames = Search_prof.search(p_name, univ_id); // 이건 검색 페이지에서 세션으로 대학 아이디 받아오는 부분 구현하면 사용
+		// profs = Search_prof.search(p_name, univ_id); // 이건 검색 페이지에서 세션으로 대학 아이디 받아오는 부분 구현하면 사용
 	}
 	else 
 		out.println("<script>alert('교수명은 공백일 수 없습니다.'); document.location.href=\"counseling_search(1).jsp\"</script>");

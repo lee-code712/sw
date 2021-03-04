@@ -19,6 +19,13 @@
     			return false;
 			}
 		}
+		
+		function op_dept_Search(dept_name)
+		{
+			var url = 'counseling_search_dept_result.jsp?d_name=';
+			
+			window.open(url + dept_name);
+		}
 	</script>
 <body>
 	<%-- 헤더 --%>
@@ -47,7 +54,7 @@
 	<div id="local2"><font color="#88BFF1">상담예약</font></div>
 	
 	<%--교수명 검색 --%>
-	<form method="get" action="counseling_search_result.jsp" name="search_prof_form" onsubmit="return ck_search_form()">
+	<form method="get" action="counseling_search_prof_result.jsp" name="search_prof_form" onsubmit="return ck_search_form()">
 	<%
 		String p_name = (String)session.getAttribute("prof_name");
 	
@@ -57,7 +64,7 @@
 		if (p_name != null) {
 			// 교수명 검색 결과 출력
 			out.println("<div id=\"square\">");
-			out.println("<jsp:include page=\"counseling_search_result.jsp\" flush=\"false\"/>");
+			out.println("<jsp:include page=\"counseling_search_prof_result.jsp\" flush=\"false\"/>");
 			out.println("</div>");
 		}
 		else {
@@ -77,67 +84,67 @@
 	<ul id="ac">
 		<li class="m1">인문대학
 			<ul class="m2">
-				<li class="m3">국어국문학과</li>
-				<li class="m3">국사학과</li>
-				<li class="m3">문예창작과</li>
-				<li class="m3">영어과</li>
-				<li class="m3">일본어과</li>
-				<li class="m3">프랑스어과</li>
-				<li class="m3">독일어과</li>
-				<li class="m3">중어중국학과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">국어국문학과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">국사학과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">문예창작과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">영어과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">일본어과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">프랑스어과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">독일어과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">중어중국학과</li>
 			</ul>
 		</li>
 		<li class="m1">사회과학대학
 			<ul class="m2">
-				<li class="m3">경영학과</li>
-				<li class="m3">세무회계학과</li>
-				<li class="m3">경제학과</li>
-				<li class="m3">국제경영학과</li>
-				<li class="m3">문헌정보학과</li>
-				<li class="m3">사회복지학과</li>
-				<li class="m3">아동학과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">경영학과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">세무회계학과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">경제학과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">국제경영학과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">문헌정보학과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">사회복지학과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">아동학과</li>
 			</ul>
 		</li>
 		<li class="m1">자연과학대학
 			<ul class="m2">
-				<li class="m3">식품영양학과</li>
-				<li class="m3">보건관리학과</li>
-				<li class="m3">응용화학전공</li>
-				<li class="m3">화장품학전공</li>
-				<li class="m3">체육학과</li>
-				<li class="m3">토탈뷰티케어학과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">식품영양학과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">보건관리학과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">응용화학전공</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">화장품학전공</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">체육학과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">토탈뷰티케어학과</li>
 			</ul>
 		</li>
 		<li class="m1">정보과학대학
 			<ul class="m2">
-				<li class="m3">컴퓨터학과</li>
-				<li class="m3">정보통계학과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">컴퓨터학과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">정보통계학과</li>
 			</ul>
 		</li>
 		<li class="m1">약학대학</li>
 		<li class="m1">예술대학
 			<ul class="m2">
-				<li class="m3">회화과</li>
-				<li class="m3">디지털공예과</li>
-				<li class="m3">큐레이터학과</li>
-				<li class="m3">피아노과</li>
-				<li class="m3">관현악과</li>
-				<li class="m3">성악과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">회화과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">디지털공예과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">큐레이터학과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">피아노과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">관현악과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">성악과</li>
 			</ul>	
 		</li>
 		<li class="m1">디자인대학
 			<ul class="m2">
-				<li class="m3">패션디자인학과</li>
-				<li class="m3">시각&실내디자인학과</li>
-				<li class="m3">미디어디자인학과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">패션디자인학과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">시각&실내디자인학과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">미디어디자인학과</li>
 			</ul>	
 		</li>
 		<li class="m1">공연예술대학
 			<ul class="m2">
-				<li class="m3">무용과</li>
-				<li class="m3">방송연예과</li>
-				<li class="m3">실용음악과</li>
-				<li class="m3">모델과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">무용과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">방송연예과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">실용음악과</li>
+				<li class="m3" onclick="op_dept_Search(this.innerText)">모델과</li>
 			</ul>		
 		</li>
 	</ul>
