@@ -159,7 +159,7 @@
     	}	
 	</script>
 	
-	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/frame.css" />
 	
 	<style>
 		#banner {
