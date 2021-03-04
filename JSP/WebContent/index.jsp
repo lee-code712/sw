@@ -8,7 +8,7 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 	<script type="text/javascript">
-		var week = new Array('일', '월', '화', '수', '목', '금', '토');
+	var week = new Array('일', '월', '화', '수', '목', '금', '토');
     	var today = null;
     	var year = null;
     	var month = null;
@@ -159,7 +159,7 @@
     	}	
 	</script>
 	
-	<link rel="stylesheet" href="index.css" />
+	<link rel="stylesheet" href="css/index.css" />
 	
 	<style>
 		#banner {
