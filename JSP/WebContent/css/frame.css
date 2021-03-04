@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
-		text-decoration: none;
+    text-decoration: none;
 }
 
 header {
@@ -49,7 +49,7 @@ header {
 }
 
 #gnb_left li:first-child {
-			padding-left: 80px;
+    padding-left: 80px;
 }
 
 #gnb_left li a {
@@ -78,7 +78,7 @@ header {
 }
 
 #gnb_right li:last-child {
-			padding-right: 0px;
+   padding-right: 0px;
 }
 
 #gnb_right li a {
@@ -112,7 +112,7 @@ header {
 
 footer {
   width: 1920px;
-	margin: 0 auto;
+  margin: 0 auto;
   margin-top: 74px;
   padding: 80px 0;
   font-size: 14px;
