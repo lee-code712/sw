@@ -556,7 +556,7 @@
 			</div>
 			
 			<ul class="gnb_left">
-				<li><a>공지사항</a></li>
+				<li><a href="notice.jsp">공지사항</a></li>
 				<li><a>상담예약</a></li>
 				<li><a>쪽지함</a></li>
 			</ul>

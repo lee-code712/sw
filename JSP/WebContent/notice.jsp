@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="jsp.sw.*, java.util.ArrayList" %>
+<%!
+	ArrayList<Notice> no = Notice_list.getList();
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -254,6 +257,12 @@
     		border: 1px solid #eee;
    			background: #eee;
 		}	
+		
+		.board_list_wrap .paging a.c_num {
+    		border: 1px solid gray;
+    		font-weight: 600;
+    		color: gray;
+		}
 
 		.board_list_wrap .paging a.num {
     		border: 1px solid #FFC200;
@@ -286,14 +295,23 @@
 			</div>
 			
 			<ul class="gnb_left">
-				<li><a>공지사항</a></li>
+				<li><a href="notice.jsp">공지사항</a></li>
 				<li><a>상담예약</a></li>
 				<li><a>쪽지함</a></li>
 			</ul>
 				
 			<ul class="gnb_right">
 				<li><a><img src="image/user.png">&nbsp;마이페이지</a></li>
-				<li><button id="login" onClick="location.href='login.jsp'">로그인</button></li>
+				<%
+					String id = (String)session.getAttribute("id");
+					if(id == null) {
+						out.println("<li><button id=\"login\" onClick=\"location.href='login.jsp'\">로그인</button></li>");
+					}
+					else {
+						out.println("<li>" + id + " 님</li>");
+						out.println("<li><button id=\"login\" onClick=\"location.href='logout.jsp'; alert('로그아웃 되었습니다.');\">로그아웃</button></li>");
+					}
+				%>
 			</ul>
 		</div>
 	</header>
@@ -332,137 +350,79 @@
 			</thead>
 			
 			<tbody>
-   			<tr>
-      			<td>1</td>
-      			<td class="tit">
-         			<a href="#">상담 예약 방법</a>
-      			</td>
-      			<td>상담E 관리자</td>
-      			<td>2021-02-26</td>
-      			<td>0</td>
-   			</tr>
-   			<tr>
-      			<td>2</td>
-      			<td class="tit">
-         			<a href="#">상담 예약 취소 방법</a>
-      			</td>
-      			<td>상담E 관리자</td>
-      			<td>2021-02-26</td>
-      			<td>0</td>
-   			</tr>
-   			<tr>
-      			<td>3</td>
-      			<td class="tit">
-         			<a href="#">상담 예약 방법</a>
-      			</td>
-      			<td>상담E 관리자</td>
-      			<td>2021-02-26</td>
-      			<td>0</td>
-   			</tr>
-   			<tr>
-      			<td>4</td>
-      			<td class="tit">
-         			<a href="#">상담 예약 방법</a>
-      			</td>
-      			<td>상담E 관리자</td>
-      			<td>2021-02-26</td>
-      			<td>0</td>
-   			</tr>
-   			<tr>
-      			<td>5</td>
-      			<td class="tit">
-         			<a href="#">상담 예약 취소 방법</a>
-      			</td>
-      			<td>상담E 관리자</td>
-      			<td>2021-02-26</td>
-      			<td>0</td>
-   			</tr>
-   			<tr>
-      			<td>6</td>
-      			<td class="tit">
-         			<a href="#">상담 예약 방법</a>
-      			</td>
-      			<td>상담E 관리자</td>
-      			<td>2021-02-26</td>
-      			<td>0</td>
-   			</tr>
-   			<tr>
-      			<td>7</td>
-      			<td class="tit">
-         			<a href="#">상담 예약 방법</a>
-      			</td>
-      			<td>상담E 관리자</td>
-      			<td>2021-02-26</td>
-      			<td>0</td>
-   			</tr>
-   			<tr>
-      			<td>8</td>
-      			<td class="tit">
-         			<a href="#">상담 예약 방법</a>
-      			</td>
-      			<td>상담E 관리자</td>
-      			<td>2021-02-26</td>
-      			<td>0</td>
-   			</tr>
-   			<tr>
-      			<td>9</td>
-      			<td class="tit">
-         			<a href="#">상담 예약 취소 방법</a>
-      			</td>
-      			<td>상담E 관리자</td>
-      			<td>2021-02-26</td>
-      			<td>0</td>
-   			</tr>
-   			<tr>
-      			<td>10</td>
-      			<td class="tit">
-         			<a href="#">상담 예약 방법</a>
-      			</td>
-      			<td>상담E 관리자</td>
-      			<td>2021-02-26</td>
-      			<td>0</td>
-   			</tr>
-   			<tr>
-      			<td>11</td>
-      			<td class="tit">
-         			<a href="#">상담 예약 취소 방법</a>
-      			</td>
-      			<td>상담E 관리자</td>
-      			<td>2021-02-26</td>
-      			<td>0</td>
-   			</tr>
-   			<tr>
-      			<td>12</td>
-      			<td class="tit">
-         			<a href="#">상담 예약 방법</a>
-      			</td>
-      			<td>상담E 관리자</td>
-      			<td>2021-02-26</td>
-      			<td>0</td>
-   			</tr>
-   			<tr>
-      			<td>13</td>
-      			<td class="tit">
-         			<a href="#">상담 예약 취소 방법</a>
-      			</td>
-      			<td>상담E 관리자</td>
-      			<td>2021-02-26</td>
-      			<td>0</td>
-   			</tr>
-		</tbody>
-	</table>
-
-	<div class="paging">
-   		<a href="#" class="bt">◀</a>
-   		<a href="#" class="bt">◁</a>
-   		<a href="#" class="num">1</a>
-   		<a href="#" class="num">2</a>
-   		<a href="#" class="num">3</a>
-   		<a href="#" class="bt">▷</a>
-  		<a href="#" class="bt">▶</a>
-	</div>
+			<%
+				int rpp = 2; // row per page
+				int size = no.size();
+				String sidx = request.getParameter("sindex");
+				
+				// 현재 페이지 설정
+				int currentPage;
+				if(sidx == null) {
+					currentPage = 1;
+				}
+				else {
+					currentPage = Integer.parseInt(sidx);
+				}
+				
+				// 시작 인덱스 설정
+				int startIndex = 0;
+				for(int i = 0; i < currentPage-1; i++) {
+					startIndex += rpp;
+				}	
+				
+				// 마지막 인덱스 설정
+				int endIndex;
+				if(size - startIndex == 0) {
+					endIndex = startIndex;	
+				}
+				else if(size - startIndex < rpp) {
+					endIndex = size;
+				}
+				else {
+					endIndex = startIndex + rpp;
+				}
+				
+				for(int i = startIndex; i < endIndex; i++) {
+					Notice e = no.get(i);
+					out.println("<tr>");
+					out.println("<td>" + e.getId() + "</td>");
+					out.println("<td class=\"tit\">" + "<a href=\"notice_no" + e.getId() + ".jsp\">" + e.getTitle() + "</td>");
+					out.println("<td>" + e.getWriter() + "</td>");
+					out.println("<td>" + e.getDate() + "</td>");
+					out.println("<td>" + e.getViews() + "</td>");
+					out.println("</tr>");
+				}
+				out.println("</tbody>");
+				out.println("</table>");
+				
+				// 전체 페이지 수 설정
+				int allpage;
+				if(size % rpp == 0) {
+					allpage = size / rpp;
+				}
+				else {
+					allpage = (size / rpp) + 1;
+				}
+				
+				out.println("<div class=\"paging\">");
+				out.println("<a href=\"#\" class=\"bt\">◀</a>");
+				out.println("<a href=\"#\" class=\"bt\">◁</a>");
+				// 페이지 인덱스 설정
+				for(int i = 1; i <= allpage; i++) {
+					if(i == currentPage) {
+						out.print("<a class=\"c_num\">" + i + "</a>");
+					}
+					else {
+						out.print("<a href=\"notice.jsp?sindex=" + i + "\" class=\"num\">" + i + "</a>");  
+					}
+				}
+				out.println("<a href=\"#\" class=\"bt\">▷</a>");
+				out.println("<a href=\"#\" class=\"bt\">▶</a>");
+				out.println("</div>");
+			%>
 </div>
 
 <footer>2021 all rights reserved.<p>Made with Lee You ri, Yoon Ra Kyung, Kim Hye Ran</footer>
 </body>
 </html>
+
