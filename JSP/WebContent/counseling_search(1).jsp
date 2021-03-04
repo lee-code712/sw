@@ -47,7 +47,7 @@
 	<div id="local2"><font color="#88BFF1">상담예약</font></div>
 	
 	<%--교수명 검색 --%>
-	<form method="post" action="counseling_search_result.jsp" name="search_prof_form" onsubmit="return ck_search_form()">
+	<form method="get" action="counseling_search_result.jsp" name="search_prof_form" onsubmit="return ck_search_form()">
 	<%
 		String p_name = (String)session.getAttribute("prof_name");
 	

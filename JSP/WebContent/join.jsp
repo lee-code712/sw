@@ -138,7 +138,7 @@
 <div id="main_join">
 <p id="title_join"><b>회원가입</b></p>
 
-<form method="post" action="join_univSearch.jsp" name="search_univ_form" onsubmit="return ck_search_form()">
+<form method="get" action="join_univSearch.jsp" name="search_univ_form" onsubmit="return ck_search_form()">
 <table id="search_univ_table">
 <tr>
 	<td>
