@@ -24,7 +24,7 @@
 <form name="login_form" method="post" action="login_ck.jsp">
 	<table id="main_login">
 		<tr>
-			<td id="title_login"><a href="mainPage.jsp">상담E*</a></td>
+			<td id="title_login"><a href="index.jsp">상담E*</a></td>
 		</tr>
 		
 		<tr>

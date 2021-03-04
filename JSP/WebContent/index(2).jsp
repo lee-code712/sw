@@ -7,6 +7,11 @@
 <title>index(Login)</title>
 	<link type="text/css" rel="stylesheet" href="css/frame.css"></link>
 	<link type="text/css" rel="stylesheet" href="css/index.css"></link>
+<script>
+	function out() {
+		alert('로그아웃 되었습니다.');
+	}
+</script>
 </head>
 
 <body>
@@ -24,7 +29,8 @@
 			
 			<ul class="nav2">
 				<li><a><img src="image/user.png">&nbsp;마이페이지</a></li>
-				<li><%=session.getAttribute("id")%>님 환영합니다!</li>
+				<li><%=session.getAttribute("id")%> 님</li>
+				<li><button id="login" onClick="location.href='logout.jsp'; out();">로그아웃</button></li>
 			</ul>
 		</div>
 	</div>
