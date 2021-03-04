@@ -1,8 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="jsp.sw.*, java.util.ArrayList" %>
-<%!
-	ArrayList<Notice> no = Notice_list.getList();
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -351,6 +348,8 @@
 			
 			<tbody>
 			<%
+				ArrayList<Notice> no = Notice_list.getList();
+			
 				int rpp = 2; // row per page
 				int size = no.size();
 				String sidx = request.getParameter("sindex");
