@@ -158,118 +158,10 @@
         	}
     	}	
 	</script>
-
+	
+	<link rel="stylesheet" href="index.css" />
+	
 	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-			text-decoration: none;
-		}
-	
-		header {
-			width: 100%;
-			height: 80px;
-			margin: 0 auto;
-			border-bottom: 2px solid #FFC200;
-		}
-		
-		.inner_header {
-			width: 1194px;
-			height: 100%;
-			margin: 0 auto;
-		}
-		
-		.logo {
-			display: table;
-			float: left;
-			height: 100%;
-		}
-	
-		.logo a {
-			display: table-cell;
-			height: 100%;
-			font-weight: bold;
-			font-size: 24px;
-			color: #FFC200;
-			vertical-align: middle;
-			cursor: pointer;
-		}
-	
-		.gnb_left {
-			float: left;
-			height: 100%;
-		}
-	
-		.gnb_left li {
-			display: table;
-			float: left;
-			height: 100%;
-			padding: 0px 30px;
-		}
-	
-		.gnb_left li a {
-			display: table-cell;
-			height: 100%;
-			font-size: 14px;
-			color: #767676;
-			vertical-align: middle;
-		}
-	
-		.gnb_left li a:hover {
-			color: #FFC200;
-			cursor: pointer;
-		}
-	
-		.gnb_left li:first-child {
-			padding-left: 80px;
-		}
-	
-		.gnb_right {
-			float: right;
-			height: 100%;
-		}
-	
-		.gnb_right li {
-			display: table;
-			float: left;
-			height: 100%;
-			padding: 0px 20px;
-		}
-	
-		.gnb_right li:last-child {
-			padding-right: 0;
-		}
-	
-		.gnb_right li a {
-			display: table-cell;
-			height: 100%;
-			font-size: 14px;
-			color: #767676;
-			vertical-align: middle;
-		}
-	
-		.gnb_right li a:hover {
-			color: #FFC200;
-			cursor: pointer;
-		}
-	
-		#login {
-			margin-top: 21px;
-			padding: 9px 25px;
-			border: 1px solid #FFC200;
-			border-radius: 5px;
-			color: white;
-			background-color: #FFC200;
-			cursor: pointer;
-		}
-	
-		#login:hover {
-			color: #FFC200;
-			background-color: white;
-			border: 1px solid #FFC200;
-		}
-	
 		#banner {
 			display: table-cell;
 			width: 1920px;
@@ -550,23 +442,21 @@
 
 <body>
 	<header>
-		<div class="inner_header">
-			<div class="logo">
-				<a>상담E</a>
-			</div>
-			
-			<ul class="gnb_left">
-				<li><a href="notice.jsp">공지사항</a></li>
-				<li><a>상담예약</a></li>
-				<li><a>쪽지함</a></li>
-			</ul>
-				
-			<ul class="gnb_right">
-				<li><a><img src="image/user.png">&nbsp;마이페이지</a></li>
-				<li><button id="login" onClick="location.href='login.jsp'">로그인</button></li>
-			</ul>
-		</div>
-	</header>
+            <div id="inner_header">
+                <div id="logo"><a>상담E</a></div>
+
+                <ul id="gnb_left">
+                    <li><a>공지사항</a></li>
+                    <li><a>상담예약</a></li>
+                    <li><a>쪽지함</a></li>
+                </ul>
+
+                <ul id="gnb_right">
+                    <li><a>마이페이지</a></li>
+                    <li><button>로그인</button></li>
+                </ul>
+            </div>
+        </header>
 	
 	<div id="banner">
 		교수-학생 간<p> 
