@@ -79,6 +79,11 @@
 		color: #FFC200;
 	}
 	
+	#title_join a {
+		text-decoration: none; 
+		color: #FFC200;
+	}
+	
 	#search {
 		height: 35px;
 		width: 374px;
@@ -173,7 +178,7 @@
 </head>
 <body>
 <div id="main_join">
-	<div id="title_join">상담E</div>
+	<div id="title_join"><a href="index.jsp">상담E</a></div>
 
 	<form method="get" action="join_univSearch.jsp" name="search_univ_form" onsubmit="return ck_search_form()">
 		<table>
