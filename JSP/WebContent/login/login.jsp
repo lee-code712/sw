@@ -7,7 +7,82 @@
 <meta charset="UTF-8">
 
 <title>Login</title>
-	<link type="text/css" rel="stylesheet" href="css/login.css"></link>
+	<%--<link type="text/css" rel="stylesheet" href="css/login.css"></link>--%>
+
+	<style>
+		#main_login {
+		margin: 0 auto;
+		margin-top: 10%;
+		width: 378px;
+		text-align: center;
+	}
+
+	#main_login a {
+		text-decoration: none; 
+		color: #FFC200;
+	}
+	
+	#main_login:hover {
+		cursor: pointer;
+	}
+	
+	#title_login {
+		font-size: 48px;
+		color: #FFC200;
+		font-weight: bold;
+	}
+	
+	#position_st {
+		margin: 40px 0 20px 0;
+		float: left;
+		width: 90px;
+		height: 25px;
+		border: 1px solid #c4c4c4;
+	}
+		
+	#id_st {
+		margin-bottom: 10px;
+		width: 378px;
+		height: 50px;
+		border: 1px solid #c4c4c4;
+		border-radius: 10px;
+	}
+		
+	#pwd_st {
+		width: 378px;
+		height: 50px;
+		border: 1px solid #c4c4c4;
+		border-radius: 10px;
+	}
+
+	#link:hover {
+		color: #FF3120;
+	}
+	
+	#login_btn {
+		display: table-cell;
+		margin: 40px 0 20px 0;
+		font-family: 'Roboto';
+		width: 378px;
+		height: 50px;
+		color: white;
+		background: #FFC200;
+		font-size: 14px;
+		border: 1px solid #FFC200;
+		border-radius: 10px;
+	}
+	
+	#login_btn:hover {
+		background: white;
+		color: #FFC200;
+		border: solid #FFC200 1px;
+		cursor: pointer;
+	}
+	
+	#account {
+		margin: 10px 0 40px 0;
+	}
+	</style>
 </head>
 
 <body>
