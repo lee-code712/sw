@@ -1,9 +1,5 @@
 @charset "UTF-8";
-/* login.jsp에 대한 css파일 */
-	body {
-		background-color: #F0F0F0;
-	}
-	
+/* login.jsp에 대한 css파일 */	
 	#main_login {
 		margin: 0 auto;
 		margin-top: 10%;
