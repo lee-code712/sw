@@ -1,7 +1,7 @@
 <%-- 대학 검색 페이지 --%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="jsp.sw.*, java.sql.*, java.net.URLEncoder"%>
+    pageEncoding="UTF-8" import="java.util.ArrayList, jsp.sw.*, java.net.URLEncoder"%>
 <% request.setCharacterEncoding("UTF-8"); %>
 <!DOCTYPE html>
 <html>
@@ -88,45 +88,28 @@
 <form method="post" action="join_univSelect.jsp" name="univSelectfrom">
 <%
 	String input = request.getParameter("univ_name");
-	input = "'%" + input + "%'";
-
-	Connection conn = null;
-	Statement st = null;       
-	ResultSet rs = null;
+	ArrayList<University> univs = null;
 	
-	String sql = "select * from university where univ_name like " + input;
+	if (input != null) {
+		univs = Search_univ.search(input);
+	}
+	else 
+		out.println("<script>alert('대학명은 공백일 수 없습니다.'); document.location.href=\"join.jsp\"</script>");
 	
-	try {
-	    Connect_univ ct = new Connect_univ();
-	    conn = ct.getConnection();
-	          
-	    st = conn.createStatement();
-	    rs = st.executeQuery(sql);
-	    
-	    if(!rs.next()) {
-	    	out.println("<script>alert('해당 대학에 대한 검색 정보가 존재하지 않습니다.'); document.location.href=\"join.jsp\"</script>");
-	    }
-	    else {
-	    	String univ = rs.getString("univ_name");
+	if (univs != null) {
+		for (int i = 0; i < univs.size(); i++) {
+			University u = univs.get(i);
+			String univ = u.getUnivName();
 	    	String univ_encoded = URLEncoder.encode(URLEncoder.encode(univ, "UTF-8"), "UTF-8");
-	    	String univ_id = rs.getString("univ_id");
+	    	String univ_id = u.getUnivID();
+	    	
 	    	out.print(univ + " ");
 	    	out.print("<input type=\"button\" value=\"선택\" onclick=\"location.href='join_univSelect.jsp?univ=" + univ_encoded + "&univ_id=" + univ_id + "'\"/>");
 	    	out.println("<br/>");
-	    	
-	    	while(rs.next()) {
-		    	univ = rs.getString("univ_name");
-		    	univ_encoded = URLEncoder.encode(URLEncoder.encode(univ, "UTF-8"), "UTF-8");
-		    	univ_id = rs.getString("univ_id");
-		    	out.print(univ + " ");
-		    	out.print("<input type=\"button\" value=\"선택\" onclick=\"location.href='join_univSelect.jsp?univ=" + univ_encoded + "&univ_id=" + univ_id + "'\"/>");
-		    	out.println("<br/>");
-		    }
-	    }
-	} catch (SQLException e) {
-	    e.printStackTrace();
-	} finally {
-		 DisConnect.close(conn, st, rs);
+		}
+	}
+	else {
+		out.println("<script>alert('해당 대학명에 대한 대학 검색 정보가 존재하지 않습니다.'); document.location.href=\"join.jsp\"</script>");
 	}
 %>
 </form>

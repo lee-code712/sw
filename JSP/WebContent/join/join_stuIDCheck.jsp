@@ -46,6 +46,7 @@
     	}
     	else
     		out.println("대학명: <input type=\"text\" id=\"univ\" name=\"univ\" value=\"" + univ + "\" disabled />");
+    	
     	out.println("<p/>");
     	
     	if (join_stuID == null)

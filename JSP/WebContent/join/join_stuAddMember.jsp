@@ -26,11 +26,10 @@
 		out.println("</script>");
 	}
 	else { // 회원가입 성공
-		// 회원가입 성공 시 세션 해제
-		session.invalidate();
+		session.invalidate(); // 회원가입 성공 시 세션 해제
 		
 		out.println("<script>");
-		out.println("alert('회원가입에 성공했습니다. 회원님의 아이디는 " + userID + "입니다.'); document.location.href=\"login.jsp\";");
+		out.println("alert('회원가입에 성공했습니다. 회원님의 아이디는 " + userID + "입니다.'); document.location.href=\"/JSP/login/login.jsp\";");
 		out.println("</script>");
 	}
 %>
