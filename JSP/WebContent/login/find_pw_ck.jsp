@@ -1,3 +1,4 @@
+<%-- 패스워드 찾기 아이디,이메일 확인 페이지 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="jsp.sw.Find_pw"%>
 <!DOCTYPE html>

@@ -1,10 +1,11 @@
+<%-- 공지사항 게시판 페이지 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="jsp.sw.*, java.util.ArrayList" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>notice.jsp</title>
+<title>notice</title>
 
 	<style>
 		* {
@@ -288,7 +289,15 @@
 	<header>
 		<div class="inner_header">
 			<div class="logo">
-				<a>상담E</a>
+				<%
+					String id = (String)session.getAttribute("id");
+					if(id == null) {
+						out.println("<a href=\"../index.jsp\">상담E</a>");
+					}
+					else {
+						out.println("<a href=\"../index(2).jsp\">상담E</a>");
+					}
+				%>
 			</div>
 			
 			<ul class="gnb_left">
@@ -298,9 +307,8 @@
 			</ul>
 				
 			<ul class="gnb_right">
-				<li><a><img src="image/user.png">&nbsp;마이페이지</a></li>
+				<li><a><img src="../image/user.png">&nbsp;마이페이지</a></li>
 				<%
-					String id = (String)session.getAttribute("id");
 					if(id == null) {
 						out.println("<li><button id=\"login\" onClick=\"location.href='login.jsp'\">로그인</button></li>");
 					}
@@ -329,7 +337,7 @@
 		
 		<div id="search">
 			<input type="text" value="검색어를 입력하세요." id="search_text">
-			<img src="image/search.png" id="search_btn">
+			<img src="../image/search.png" id="search_btn">
 		</div>
 	</div>
 	
@@ -385,7 +393,7 @@
 					Notice e = no.get(i);
 					out.println("<tr>");
 					out.println("<td>" + e.getId() + "</td>");
-					out.println("<td class=\"tit\">" + "<a href=\"notice_no" + e.getId() + ".jsp\">" + e.getTitle() + "</td>");
+					out.println("<td class=\"tit\">" + "<a href=\"notice_contents.jsp?id=" + e.getId() + "\">" + e.getTitle() + "</td>");
 					out.println("<td>" + e.getWriter() + "</td>");
 					out.println("<td>" + e.getDate() + "</td>");
 					out.println("<td>" + e.getViews() + "</td>");

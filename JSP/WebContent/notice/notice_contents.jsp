@@ -1,10 +1,14 @@
+<%-- 공지사항별 페이지  --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"  import="jsp.sw.*, java.util.ArrayList" %>
+<%!
+	ArrayList<Notice> no = Notice_list.getList();
+%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>notice.jsp</title>
+<title>notice_contents</title>
 	<style>
 		* {
 			margin: 0;
@@ -203,18 +207,34 @@
 	<header>
 		<div class="inner_header">
 			<div class="logo">
-				<a>상담E</a>
+				<%
+					String id = (String)session.getAttribute("id");
+					if(id == null) {
+						out.println("<a href=\"../index.jsp\">상담E</a>");
+					}
+					else {
+						out.println("<a href=\"../index(2).jsp\">상담E</a>");
+					}
+				%>
 			</div>
 			
 			<ul class="gnb_left">
-				<li><a>공지사항</a></li>
+				<li><a href="notice.jsp">공지사항</a></li>
 				<li><a>상담예약</a></li>
 				<li><a>쪽지함</a></li>
 			</ul>
 				
 			<ul class="gnb_right">
 				<li><a>마이페이지</a></li>
-				<li><button id="login" onClick="location.href='login.jsp'">로그인</button></li>
+				<%
+					if(id == null) {
+						out.println("<li><button id=\"login\" onClick=\"location.href='login.jsp'\">로그인</button></li>");
+					}
+					else {
+						out.println("<li>" + id + " 님</li>");
+						out.println("<li><button id=\"login\" onClick=\"location.href='logout.jsp'; alert('로그아웃 되었습니다.');\">로그아웃</button></li>");
+					}
+				%>
 			</ul>
 		</div>
 	</header>
@@ -227,13 +247,18 @@
 	
 	<form>
 		<div id="contents">
-			<div id="contents_header">
-				<span id="contents_title">상담 예약 절차</span>
-				<span id="contents_date">2021-03-07</span>
-			</div>
-			<div id="contents_body">(해당 페이지 내용)</div>
-		
-			<input type="submit" id="contents_btn" alt="contents_btn" value="목록">
+			<%
+				String param = request.getParameter("id");
+				int index = Integer.parseInt(param) - 1;
+				out.println("<div id=\"contents_header\">");
+				out.println("<span id=\"contents_title\">" + no.get(index).getTitle() + "</span>");
+				out.println("<span id=\"contents_date\">"+ no.get(index).getDate() + "</span>");
+				out.println("</div>");
+				out.println("<div id=\"contents_body\">"+ no.get(index).getContents() + "</div>");
+				
+				Notice_list.add_view(param);
+		 	%>
+		 	<a id="contents_btn" href="notice.jsp">목록</a>
 		</div>
 	</form>
 	

@@ -106,7 +106,7 @@
 <table id = "link_table">
 	<tr>
 		<td><a href="login.jsp" id="link">로그인</a></td>
-		<td><a href="join.jsp" id="link">회원 가입</a></td>
+		<td><a href="../join/join.jsp" id="link">회원 가입</a></td>
 	</tr>
 </table>
 </div>

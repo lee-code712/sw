@@ -1,3 +1,4 @@
+<%-- 로그인 페이지 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
@@ -7,7 +8,7 @@
 <meta charset="UTF-8">
 
 <title>Login</title>
-	<%--<link type="text/css" rel="stylesheet" href="css/login.css"></link>--%>
+	<%--<link type="text/css" rel="stylesheet" href="../css/login.css"></link>--%>
 
 	<style>
 		#main_login {
@@ -99,7 +100,7 @@
 <form name="login_form" method="post" action="login_ck.jsp">
 	<table id="main_login">
 		<tr>
-			<td id="title_login"><a href="index.jsp">상담E</a></td>
+			<td id="title_login"><a href="../index.jsp">상담E</a></td>
 		</tr>
 		
 		<tr>
@@ -128,11 +129,11 @@
 		</tr>
 		
 		<tr>
-			<td><div id="account">계정을 잊으셨나요? <a href="find_pw.jsp" id="link">아이디 찾기</a> 또는 <a href="find_pw.jsp" id="link">비밀번호 찾기</a></div></td>
+			<td><div id="account">계정을 잊으셨나요? <a href="find_pw.jsp" id="link">비밀번호 찾기</a></div></td>
 		</tr>
 		
 		<tr>
-			<td>아직 회원이 아니신가요? <a href="join.jsp" id="link">회원 가입</a></td>
+			<td>아직 회원이 아니신가요? <a href="../join/join.jsp" id="link">회원 가입</a></td>
 		</tr>
 	</table>
 </form>

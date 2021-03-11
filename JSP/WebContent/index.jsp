@@ -1,3 +1,4 @@
+<%-- 로그인 전 메인 페이지 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -165,17 +166,17 @@
     <body>
         <header>
             <div id="inner_header">
-                <div id="logo"><a>상담E</a></div>
+                <div id="logo"><a href="index.jsp">상담E</a></div>
 
             <ul id="gnb_left">
-                <li><a>공지사항</a></li>
+                <li><a href="notice/notice.jsp">공지사항</a></li>
                 <li><a>상담예약</a></li>
                 <li><a>쪽지함</a></li>
             </ul>
 
             <ul id="gnb_right">
                 <li><a>마이페이지</a></li>
-                <li><button>로그인</button></li>
+                <li><button onClick="location.href='login/login.jsp';">로그인</button></li>
             </ul>
             </div>
         </header>
